@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+
+
+
+<html>
+    <head>
+            <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Udfs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="dremio is reimagining data analytics for the modern world" />
+    <meta name="keywords" content="analytics, apache arrow, apache drill, apache parquet" />
+
+    
+    <meta property="og:title" content="dremio | reimagining data analytics for the modern world"/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content="http://www.dremio.com"/>
+    <meta property="og:site_name" content="dremio"/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content="dremio | reimagining data analytics for the modern world" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="http://www.dremio.com" />
+    <meta name="twitter:card" content="" />
+
+    
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+
+    
+    <link rel="stylesheet" href="/css/animate.css">
+    
+    <link rel="stylesheet" href="/css/icomoon.css">
+    
+    <link rel="stylesheet" href="/css/simple-line-icons.css">
+    
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+    
+    <link rel="stylesheet" href="/css/bootstrap.css">
+
+    
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+    <script src="/js/modernizr-2.6.2.min.js"></script>
+    
+    
+
+    </head>
+    <body>
+
+          <header role="banner" id="fh5co-header" class="navbar-fixed-top fh5co-animated slideInDown">
+        <div class="container">
+            
+            <nav class="navbar navbar-default">
+                <div class="navbar-header">
+                    
+                    <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+                    <a class="navbar-brand" href="/index.html">dremio</a>
+                </div>
+        </nav>
+        
+    </div>
+</header>
+
+      <br/>
+      <br/>
+      <br/>
+      <div class="container">
+        <div class="overlay"></div>
+        <div class="fh5co-text">
+          <section id="main">
+            <div>
+             <h1 id="title">Udfs</h1>
+             <ul id="list">
+                 
+                     <div>
+  <a href="#ZgotmplZ">Parsing EPA vehicle data for linear correlations in MPG ratings</a><span style="font-size:12pt"> from 2016-02-11</span>
+  <div> In the previous day&rsquo;s post I demonstrated how to code a custom aggregate function that can process two sets of data points into their corresponding Pearson&rsquo;s r value, which is a useful indicator of variable correlation. Today I&rsquo;m going to put that function to the test on this EPA data set that contains information about vehicles manufactured from model years 1984 to 2017. The two questions I&rsquo;d like to answer are: 1. </div>
+  <br/>
+</div>
+
+                 
+                     <div>
+  <a href="#ZgotmplZ">Calculating Pearson&#39;s r using a custom SQL function</a><span style="font-size:12pt"> from 2016-02-10</span>
+  <div> Lately I&rsquo;ve written a lot of custom functions to assist me in my example Drill analyses, but they&rsquo;ve all been of the same fundamental type: They take one or more columns of a single row and process them into a single output. The Drill documentation calls these &ldquo;simple&rdquo; functions. However there&rsquo;s another class of functions lurking out there&mdash;ones that can accept many rows of data as input. We call them &ldquo;aggregate&rdquo; functions. </div>
+  <br/>
+</div>
+
+                 
+                     <div>
+  <a href="#ZgotmplZ">Managing variable type nullability</a><span style="font-size:12pt"> from 2016-02-09</span>
+  <div> One day you may find yourself with a custom function for Drill that&rsquo;s very particular about the kind of variables that it accepts. In particular, it may hold strong opinions about whether or not a variable is allowed to express a NULL value. In fact it may even be you who wrote this unavoidably fussy function (SPOILER: This is exactly what happened to me earlier this week).
+Currently Drill lacks built-in functions to add or strip nullability from variables, but luckily it&rsquo;s very easy to whip up a couple UDFs which do exactly that. </div>
+  <br/>
+</div>
+
+                 
+                     <div>
+  <a href="#ZgotmplZ">Smartest and dumbest subreddits as judged by submission title readability</a><span style="font-size:12pt"> from 2016-02-06</span>
+  <div> Alright, time to put the readability UDF from my last post to work on some data! For today&rsquo;s analysis, I&rsquo;ll once again use this Reddit submission corpus, which contains submission data from from the years 2006-2015.
+The questions that motivate today&rsquo;s analysis are simple, but fun: Which popular subreddits have the highest average submission title reading level? Which ones have the lowest? Or, more glibly, &ldquo;Which subreddits are smart, and which are dumb? </div>
+  <br/>
+</div>
+
+                 
+                     <div>
+  <a href="#ZgotmplZ">Querying for reading level with a simple UDF</a><span style="font-size:12pt"> from 2016-02-05</span>
+  <div> Today, just like in this post from the previous week, I&rsquo;d like to discuss creating a simple custom SQL function for Drill that maps strings to float values. Except this week&rsquo;s function is even more simple because it can fit within a single file and requires no instructions in the setup() method. In fact, this may be the simplest example of a Drill UDF I&rsquo;ve ever seen, so if you&rsquo;ve been struggling with how to go about writing your own, the source code I&rsquo;m presenting today maybe a good way to get some traction. </div>
+  <br/>
+</div>
+
+                 
+                     <div>
+  <a href="#ZgotmplZ">Reddit hates George Bush more than Vladimir Putin</a><span style="font-size:12pt"> from 2016-01-29</span>
+  <div> Just as I promised, today I&rsquo;m going to show off that nifty sentiment analysis UDF for Apache Drill that I discussed in the last article.
+Today&rsquo;s data is once again provided by this awesome dump of Reddit submissions that date from 2006 up through last summer. Basically I just ran the sentiment analyzer function through submission titles, examining a selection of politicians that I thought Reddit might feel strongly about. </div>
+  <br/>
+</div>
+
+                 
+                     <div>
+  <a href="#ZgotmplZ">Writing a custom SQL function for sentiment analysis</a><span style="font-size:12pt"> from 2016-01-28</span>
+  <div> In the world of data analytics a &lsquo;sentiment analysis&rsquo; is any technique that attempts to represent the feelings of users in a somewhat quantitative way. Implementations of this idea vary, but one of the simplest ones involves giving individual words a numeric score according to the strength of the positive or negative the emotions that they elicit. For instance we might assign a score of -2.3 to the word &lsquo;disappointment&rsquo; and a score of 1. </div>
+  <br/>
+</div>
+
+                 
+             </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      
+        	<footer id="footer" role="contentinfo">
+		<a href="#" class="gotop js-gotop"><i class="icon-arrow-up2"></i></a>
+		<div class="container">
+			<div class="">
+				<div class="col-md-12 text-center">
+					<p>Copyright &copy; Dremio Corporation. All Rights Reserved. Site theme from FreeHTML5.co</p>
+
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<ul class="social social-circle">
+						<li><a href="https://twitter.com/dremiohq"><i class="icon-twitter"></i></a></li>
+						<li><a href="https://www.facebook.com/pages/Dremio/1449887358675068"><i class="icon-facebook"></i></a></li>
+						<li><a href="https://www.linkedin.com/company/dremio"><i class="icon-linkedin"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+      
+
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5848806689cd5d32"></script> 
+    </body>
+</html>
