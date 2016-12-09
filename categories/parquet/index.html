@@ -76,14 +76,14 @@
              <ul id="list">
                  
                      <div>
-  <a href="#ZgotmplZ">Tuning Parquet file performance</a><span style="font-size:12pt"> from 2015-12-13</span>
+  <a href="/blog/tuning-Parquet-file-performance/">Tuning Parquet file performance</a><span style="font-size:12pt"> from 2015-12-13</span>
   <div> Today I&rsquo;d like to pursue a brief discussion about how changing the size of a Parquet file&rsquo;s &lsquo;row group&rsquo; to match a file system&rsquo;s block size can effect the efficiency of read and write performance. This tweak can be especially important on HDFS environments in which I/O is intrinsically tied to network operations. (Note: If you&rsquo;d first like to learn about Parquet in a less &lsquo;nuts and bolts&rsquo; manner, let me recommend this post in which I provide a simple demo of the format using Apache Drill). </div>
   <br/>
 </div>
 
                  
                      <div>
-  <a href="#ZgotmplZ">SQL and Parquet: A simple demo</a><span style="font-size:12pt"> from 2015-12-01</span>
+  <a href="/blog/SQL-and-Parquet-a-simple-demo/">SQL and Parquet: A simple demo</a><span style="font-size:12pt"> from 2015-12-01</span>
   <div> For data wranglers wishing to store large amounts of text or numeric entries in an efficient fashion, the Apache Parquet file format makes for an obvious choice. As a storage medium, Parquet has two important benefits afforded by its columnar structure: 1.) Access to data columns can be made on an &lsquo;as needed&rsquo; basis, increasing the overall speed of queries, and 2.) Since all values in a column are serialized and compressed together, Parquet files take up much less room than similar plain text or row-wise compressed files. </div>
   <br/>
 </div>
