@@ -30,6 +30,13 @@ function init() {
     // Create the Google Map using out element and options defined above
     var map = new google.maps.Map(mapElement, mapOptions);
 
+    var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        title: 'dremio HQ'
+    });
+
+/*
     var addresses = ['883 N Shoreline Blvd c100, Mountain View, CA 94043'];
 
     for (var x = 0; x < addresses.length; x++) {
@@ -44,6 +51,7 @@ function init() {
 
         });
     }
+*/
 
 }
 google.maps.event.addDomListener(window, 'load', init);
