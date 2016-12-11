@@ -71,7 +71,8 @@
         <div class="overlay"></div>
         <div class="fh5co-text">
           <h1>Tuning Parquet file performance</h1>
-          <h4>by Nathan Griffith on 2015-12-13</h4>
+          
+          <h4>published on 2015-12-13</h4>
           <p>Today I&rsquo;d like to pursue a brief discussion about how changing the size of a Parquet file&rsquo;s &lsquo;row group&rsquo; to match a file
 system&rsquo;s block size can effect the efficiency of read and write performance. This tweak can be especially important on
 HDFS environments in which I/O is intrinsically tied to network operations. (Note: If you&rsquo;d first like to learn about
