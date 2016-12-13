@@ -304,6 +304,13 @@ h1, h2, h3, h4, h5, h6 {
   padding-left: 0;
   color: #fff;
 }
+
+#fh5co-header .navbar-logo {
+  float: left;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
 #fh5co-header.navbar-fixed-top {
   position: fixed !important;
   background: #fff;
