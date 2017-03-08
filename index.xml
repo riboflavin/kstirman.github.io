@@ -6,238 +6,8 @@
     <description>Recent content on dremio | reimagining data analytics for the modern world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Mar 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jun 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="#ZgotmplZ" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>What Is Data Engineering?</title>
-      <link>localhost:1313</link>
-      <pubDate>Wed, 08 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>localhost:1313</guid>
-      <description>
-
-&lt;h2 id=&#34;what-is-data-engineering&#34;&gt;What is Data Engineering?&lt;/h2&gt;
-
-&lt;p&gt;Data is at the center of every business today. Companies use data to answer questions about their businesses, such as:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;What’s a new customer worth?&lt;/li&gt;
-&lt;li&gt;How can I improve our website?&lt;/li&gt;
-&lt;li&gt;What are the fastest-growing product lines?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In most organizations, many different systems create data. Each system may use a different technology, and each has a distinct owner within the organization. For example, consider data about customers:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;One system contains information about billing and shipping.&lt;/li&gt;
-&lt;li&gt;Another system maintains the history of orders.&lt;/li&gt;
-&lt;li&gt;And other systems store customer support, behavioral information, and third-party data.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Together this data provides a full understanding of the customer. However, these different data sets are independent of one another. This makes answering certain questions &amp;ndash; like what types of orders result in the highest customer support costs &amp;ndash; very difficult. This kind of analysis is challenging because the data is managed by different technologies and stored in various structures. Yet, the tools used for analysis assume the data is managed by the same technology, and stored in the same structure.&lt;/p&gt;
-
-&lt;p&gt;Even relatively small companies might have millions of customers, and huge amounts of data to comb through to answer these questions. Data engineering is about supporting that process &amp;ndash; making it possible for consumers of data, such as analysts, data scientists, and executives &amp;ndash; to reliably, quickly, and securely inspect all of the data available.&lt;/p&gt;
-
-&lt;p&gt;&lt;br&gt;
-&lt;br&gt;
-&lt;p style=&#34;text-align: center;&#34;&gt;
-&lt;img style=&#34;max-width: 100%;&#34; src=&#34;localhost:1313/img/data-engineering.png&#34;&gt;
-&lt;/p&gt;
-&lt;p style=&#34;text-align: center; font-style: italic;&#34;&gt;Data Engineering helps make data more useful and accessible for consumers of data.&lt;/p&gt;
-&lt;br&gt;
-&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;Data engineering must source, transform, and analyze data from each system. For example, data stored in a relational database is managed as tables, like an Excel spreadsheet. Each table contains many rows, and all rows have the same columns. A given piece of information, such as a customer order, may be stored across dozens of tables. In contrast, data stored in a NoSQL database such as MongoDB is managed as documents, which are more like Word documents. Each document is flexible and may contain a different set of attributes. When querying the relational database a data engineer would use SQL, whereas MongoDB has a proprietary language that is very different from SQL. Data engineering works with both types of systems, as well as many others, to make it easier for consumers of the data to use all the data together, without mastering all the intricacies of each technology.&lt;/p&gt;
-
-&lt;p&gt;For these reasons even simple questions can require complex solutions. Working with each system requires understanding the technology, as well as the data. Once data engineering has sourced and curated the data for a given job, it is much easier to use for consumers of the data.&lt;/p&gt;
-
-&lt;h2 id=&#34;trends-history&#34;&gt;Trends &amp;amp; History&lt;/h2&gt;
-
-&lt;p&gt;As companies become more reliant on data, the importance of data engineering continues to grow. Since 2012 Google searches for the phrase &amp;ldquo;data engineering&amp;rdquo; have tripled:&lt;/p&gt;
-
-&lt;p&gt;&lt;br&gt;
-&lt;br&gt;
-&lt;p style=&#34;text-align: center;&#34;&gt;
-&lt;img style=&#34;max-width: 100%;&#34; src=&#34;localhost:1313/img/data-engineering-google-trends.png&#34;&gt;
-&lt;/p&gt;
-&lt;p style=&#34;text-align: center; font-style: italic;&#34;&gt;Google searches for Data Engineering. From Google Trends.&lt;/p&gt;
-&lt;br&gt;
-&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;And in that time, job postings for data engineers have also increased more than 400%. Just in the past year, they’ve almost doubled.&lt;/p&gt;
-
-&lt;p&gt;&lt;br&gt;
-&lt;br&gt;
-&lt;p style=&#34;text-align: center;&#34;&gt;
-&lt;img style=&#34;max-width: 100%;&#34; src=&#34;localhost:1313/img/data-engineering-indeed.png&#34;&gt;
-&lt;/p&gt;
-&lt;p style=&#34;text-align: center; font-style: italic;&#34;&gt;Data Engineering job listings. From indeed.com.&lt;/p&gt;
-&lt;br&gt;
-&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;Why?&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;There’s more data than ever before, and data is growing faster than ever before.&lt;/strong&gt; More data was created in the past two years than all prior years combined.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Data is more valuable to companies, across more business functions.&lt;/strong&gt; Sales, marketing, finance and others areas of the business are using data to be more innovative and more effective.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;The technologies used for data are more complex.&lt;/strong&gt; Most companies today create data in many systems.  They also use a range of different technologies for their data, including relational databases, Hadoop, and NoSQL.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Companies are finding more ways to benefit from data.&lt;/strong&gt; They use data to understand the current state of the business. They are also using data to predict the future, model their customers, prevent threats, and create new kinds of products. Data engineering is the linchpin in all these activities.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;As data becomes more complex, data engineering will continue to grow in importance. And as the demands for data increase, data engineering will become even more critical.&lt;/p&gt;
-
-&lt;h2 id=&#34;data-engineering-responsibilities&#34;&gt;Data Engineering Responsibilities&lt;/h2&gt;
-
-&lt;p&gt;Data engineering organizes data to make it easy for other systems and people to use. They work with many different consumers of data, such as:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Data Analysts&lt;/strong&gt; answer specific questions about data, or build reports and visualizations so that other people can understand the data more easily.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Data Scientists&lt;/strong&gt; answer more complex questions than data analysts do &amp;ndash; for example, a data scientist might build a model that predicts which customers are likely to purchase a specific item.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Systems Architects&lt;/strong&gt; are responsible for pulling data into the applications they build. For example, an e-commerce store might offer discounts depending on a user&amp;rsquo;s purchase history, and the infrastructure for calculating that discount is built by a Systems Architect.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Business Leaders&lt;/strong&gt; understand what the data means and how others will use it.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Data engineering works with each of these groups to understand their specific needs. The data engineer’s responsibilities include:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Gathering data requirements,&lt;/strong&gt; such as how long the data needs to be stored, how it will be used, and what people and systems need access to the data.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Maintaining metadata about the data,&lt;/strong&gt; such as what technology manages the data, the schema, the size, how the data is secured, the source of the data, and the ultimate owner of the data.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Ensuring security and governance for the data,&lt;/strong&gt; using centralized security controls like LDAP, encrypting the data, and auditing access to the data.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Storing the data,&lt;/strong&gt; using specialized technologies that are optimized for the particular use of the data, such as a relational database, a NoSQL database, Hadoop, Amazon S3, or Azure Blog Storage.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Processing data for specific needs,&lt;/strong&gt; using tools that access data from different sources, transform and enrich the data, summarize the data, and store the data in the storage system&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;To address these responsibilities, data engineering performs many different tasks. Some examples include:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Acquisition.&lt;/strong&gt; Sourcing the data from different systems.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Cleansing.&lt;/strong&gt; Detecting and correcting errors.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Conversion.&lt;/strong&gt; Converting data from one format to another.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Disambiguation.&lt;/strong&gt; Interpreting data that has multiple meanings.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;De-duplication.&lt;/strong&gt; Removing duplicate copies of data.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;It is common to use most or all of these tasks for any data processing job.&lt;/p&gt;
-
-&lt;h2 id=&#34;what-kinds-of-data-sources-does-data-engineering-use&#34;&gt;What Kinds of Data Sources Does Data Engineering Use?&lt;/h2&gt;
-
-&lt;p&gt;Companies create data using many different types of technologies. Each technology is specialized for a different purpose &amp;ndash; speed, security, and cost are some of the tradeoffs. Application teams choose the technology that is best suited to the system they are building.  Data engineering must be capable of working with these technologies and the data they produce.&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;strong&gt;Data Source&lt;/strong&gt;&lt;/th&gt;
-&lt;th&gt;&lt;strong&gt;Applications&lt;/strong&gt;&lt;/th&gt;
-&lt;th&gt;&lt;strong&gt;Data Structures&lt;/strong&gt;&lt;/th&gt;
-&lt;th&gt;&lt;strong&gt;Interface&lt;/strong&gt;&lt;/th&gt;
-&lt;th&gt;&lt;strong&gt;Vendors&lt;/strong&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Relational databases&lt;/strong&gt; (operational)&lt;/td&gt;
-&lt;td&gt;HR, CRM, financial planning&lt;/td&gt;
-&lt;td&gt;Tables&lt;/td&gt;
-&lt;td&gt;SQL&lt;/td&gt;
-&lt;td&gt;Oracle, Microsoft SQL Server, IBM DB2&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Relational databases&lt;/strong&gt; (analytical)&lt;/td&gt;
-&lt;td&gt;Data warehouses, data marts&lt;/td&gt;
-&lt;td&gt;Tables&lt;/td&gt;
-&lt;td&gt;SQL&lt;/td&gt;
-&lt;td&gt;Teradata, Vertica, Amazon Redshift, Sybase IQ&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;JSON databases&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;Web, mobile, social&lt;/td&gt;
-&lt;td&gt;JSON documents&lt;/td&gt;
-&lt;td&gt;Proprietary language&lt;/td&gt;
-&lt;td&gt;MongoDB&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Key-value systems&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;Web, mobile, social&lt;/td&gt;
-&lt;td&gt;Objects&lt;/td&gt;
-&lt;td&gt;Proprietary language&lt;/td&gt;
-&lt;td&gt;Memcached, Redis&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Columnar databases&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;IoT, machine data&lt;/td&gt;
-&lt;td&gt;Column families&lt;/td&gt;
-&lt;td&gt;Proprietary language&lt;/td&gt;
-&lt;td&gt;Apache Cassandra, Apache HBase&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;File systems&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;Data storage&lt;/td&gt;
-&lt;td&gt;Files&lt;/td&gt;
-&lt;td&gt;API&lt;/td&gt;
-&lt;td&gt;Hadoop Distributed File System (HDFS)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Object stores&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;Data storage&lt;/td&gt;
-&lt;td&gt;Objects&lt;/td&gt;
-&lt;td&gt;API&lt;/td&gt;
-&lt;td&gt;Amazon S3, Azure Blob Store&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Spreadsheets&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;Desktop data analysis&lt;/td&gt;
-&lt;td&gt;Worksheets&lt;/td&gt;
-&lt;td&gt;API&lt;/td&gt;
-&lt;td&gt;Microsoft Excel&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;p&gt;Companies also use vendor applications, such as SAP or Microsoft Exchange. These are applications companies run themselves, or services they use in the cloud, such as Salesforce.com or Google G Suite. Vendor applications manage data in a &amp;ldquo;black box.&amp;rdquo; They provide application programming interfaces (APIs) to the data, instead of direct access to the underlying database. APIs are specific to a given application, and each presents a unique set of capabilities and interfaces that require knowledge and following best practices. Furthermore, these APIs evolve over time as new features are added to applications. For example, if your CRM application adds the ability to store the Twitter handle of your customer, the API would change to allow you to access this data. Data engineers must be able to work with these APIs.&lt;/p&gt;
-
-&lt;h2 id=&#34;what-are-the-key-data-engineering-skills-and-tools&#34;&gt;What Are The Key Data Engineering Skills and Tools?&lt;/h2&gt;
-
-&lt;p&gt;Data engineers uses specialized tools to work with data. Each system presents specific challenges for the data engineering team. They must consider the way data is modeled, stored, secured, and encoded. Data engineering teams must also understand the most efficient ways to access and manipulate the data.&lt;/p&gt;
-
-&lt;p&gt;Data engineering thinks about the end-to-end process as “data pipelines.” Each pipeline has one one or more sources, and one or more destinations. Within the pipeline, data may undergo sever steps of transformation, validation, enrichment, summarization, or other steps. Data engineering creates these pipelines with a variety of technologies such as:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;ETL Tools.&lt;/strong&gt; Extract Transform Load (ETL) is a category of technologies that move data between systems. These tools access data from many different technologies. They then apply rules to “transform” and cleanse the data so that it is ready for analysis. For example, an ETL process might extract the postal code from an address field and store this value in a new field so that analysis can easily be performed at the postal code level. Finally, they load the data into a destination system for analysis. Examples of ETL products include Informatica and SAP Data Services.&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;SQL.&lt;/strong&gt; Structured Query Language (SQL) is the standard language for querying relational databases. Data engineering uses SQL to perform ETL tasks within a relational database. SQL is especially useful when the data source and destination are the same type of database. SQL is very popular and well understood by many people and supported by many tools.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Python.&lt;/strong&gt; Python is a general purpose programming language. It has become a popular tool for performing ETL tasks due to its ease of use and extensive libraries for accessing databases and storage technologies. Python can be used instead of ETL tools for ETL tasks. Many data engineers use Python instead of an ETL tool because it is more flexible and more powerful for these tasks.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Spark &amp;amp; Hadoop.&lt;/strong&gt; Spark and Hadoop work with large data sets on clusters of computers. They make it easier to apply the power of many computers working together to perform a job on the data. This capability is especially important when the data is too large to be stored on a single computer. Today Spark and Hadoop are not as easy to use as Python, and there are far more people who know and use Python.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;HDFS &amp;amp; Amazon S3.&lt;/strong&gt; Data engineering uses HDFS or Amazon S3 to store data during processing. HDFS and Amazon S3 are specialized file systems that can store an essentially unlimited amount of data, making them useful for data science tasks. They are also inexpensive, which is important as processing generates large volumes of data. Finally, these data storage systems are integrated into environments where the data will be processed. This makes managing data systems much easier.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;New data technologies emerge frequently, often delivering significant performance, security or other improvements that let data engineers do their jobs better. Many of these tools are licensed as open source software. Open source projects allow teams across companies to easily collaborate on software projects, and to use these projects with no commercial obligations. Since the early 2000s, many of the largest companies who specialize in data, such as Google and Facebook, have created critical data technologies that they have released to the public as open source projects.&lt;/p&gt;
-
-&lt;h2 id=&#34;data-engineering-vs-data-science&#34;&gt;Data Engineering vs. Data Science&lt;/h2&gt;
-
-&lt;p&gt;Data Engineering and Data Science are complementary. Essentially, data engineering ensures that data scientists can look at data reliably and consistently.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Data Scientists&lt;/strong&gt; use technologies such as machine learning and data mining. They also use tools like R, Python, and SAS to analyze data in powerful ways. These technologies assume the data is ready for analysis and gathered together in one place. They communicate their insights using charts, graphs, and visualization tools. Data scientists must be able to explain their results to technical and non-technical audiences.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Data Engineering&lt;/strong&gt; uses tools like SQL and Python to make data ready for data scientists. Data engineering works with data scientists to understand their specific needs for a job. They build data pipelines that source and transform the data into the structures needed for analysis. These data pipelines must be well engineered for performance and reliability. This requires a strong understanding of software engineering best practices. Data engineering also uses monitoring and logging to help ensure reliability. They must design for performance and scalability to work with large data sets and demanding SLAs.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Data engineering makes data scientists more productive. Data engineering allows them to focus on what they do best–performing analysis. Without data engineering, data scientists spend the majority of their time preparing data for analysis.&lt;/p&gt;
-
-&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
-
-&lt;p&gt;With the right tools data engineers can be significantly more productive. Dremio is a new kind of technology designed specifically for data engineering. It simplifies and accelerates access to data. Dremio helps data engineers become more strategic and innovative. Learn more about Dremio.&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title>BI on Big Data: What are your options?</title>
@@ -2021,6 +1791,97 @@ And I&amp;rsquo;ve also used the &lt;code&gt;dir0&lt;/code&gt; variable to my ad
 hierarchy.&lt;/p&gt;
 
 &lt;p&gt;Querying classical music compositions is definitely an unexpected and wonderful way to use Drill!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Using a SQL JOIN on two CSV files</title>
+      <link>localhost:1313</link>
+      <pubDate>Tue, 19 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>localhost:1313</guid>
+      <description>&lt;p&gt;One of Drill&amp;rsquo;s great strengths is its ability to unite sets of information found in different places. In today&amp;rsquo;s article
+I&amp;rsquo;ll provide a quick example of this functionality by showing you how to you use Drill to quickly improve the interface
+to some found data.&lt;/p&gt;
+
+&lt;p&gt;We&amp;rsquo;ll start with the interesting but strangely formatted business-centered census data that we used in the &lt;a href=&#34;http://www.dremio.com/blog/converting-csv-file-data-to-kudu-storage/&#34;&gt;last
+post&lt;/a&gt; (available on
+&lt;a href=&#34;https://www.census.gov/econ/cbp/download/&#34;&gt;this site&lt;/a&gt; as a 14.3 MB zip file). As you&amp;rsquo;ll recall, our command to query
+the state, county, and industry codes, along with the number of establishments, yielded results in the following format:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+-----------+----------+---------+------+
+| fipstate  | fipscty  |  naics  | est  |
++-----------+----------+---------+------+
+| 55        | 107      | 321113  | 1    |
+| 48        | 185      | 51213/  | 1    |
+| 39        | 135      | 42491/  | 6    |
+| 04        | 027      | 4411//  | 30   |
+| 08        | 085      | 541870  | 1    |
+| 26        | 061      | 51----  | 17   |
+| 28        | 049      | 519///  | 3    |
+| 48        | 139      | 48849/  | 3    |
+| 22        | 073      | 4853//  | 3    |
+| 48        | 139      | 424910  | 10   |
++-----------+----------+---------+------+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It&amp;rsquo;s great to have data with this level of granularity, but the FIPS codes that the file uses to identify the state and
+county are far from intuitive. Thankfully we can use Drill in combination with this &lt;a href=&#34;https://github.com/hadley/data-counties/blob/master/county-fips.csv&#34;&gt;lovely CSV
+file&lt;/a&gt; from Github user &amp;lsquo;hadley&amp;rsquo; to make the data
+more user-friendly. (Remember to rename both files as &amp;lsquo;.csvh&amp;rsquo; so Drill knows to pick up the column names!)&lt;/p&gt;
+
+&lt;p&gt;Because Drill effectively treats each file as a separate table, we can gain access to human readable state and county
+names by performing an SQL JOIN across the files.&lt;/p&gt;
+
+&lt;p&gt;That handy file from Github has a format like&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+-----------------------+--------+--------------+-------------+
+|        county         | state  | county_fips  | state_fips  |
++-----------------------+--------+--------------+-------------+
+| Aleutians East        | AK     | 13           | 2           |
+| Aleutians West        | AK     | 16           | 2           |
+| Anchorage             | AK     | 20           | 2           |
+| Bethel                | AK     | 50           | 2           |
+| Bristol Bay           | AK     | 60           | 2           |
+| Denali                | AK     | 68           | 2           |
+| Dillingham            | AK     | 70           | 2           |
+| Fairbanks North Star  | AK     | 90           | 2           |
+| Haines                | AK     | 100          | 2           |
+| Juneau                | AK     | 110          | 2           |
++-----------------------+--------+--------------+-------------+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;so a simple query that brings state and county names to the census data using a JOIN is:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  SELECT t2.state, t2.county, SUM(CAST(t1.est AS INT)) `total establishments`
+    FROM dfs.`/path/to/cbp13co.csvh` t1
+    JOIN dfs.`/path/to/county-fips.csvh` t2
+      ON t1.fipstate = t2.state_fips
+     AND t1.fipscty = t2.county_fips
+GROUP BY t2.state, t2.county
+ORDER BY `total establishments`
+    DESC LIMIT 10;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Which, for the curious, produces the following output:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+--------+--------------+-----------------------+
+| state  |    county    | total establishments  |
++--------+--------------+-----------------------+
+| TX     | Harris       | 571756                |
+| TX     | Dallas       | 374670                |
+| NY     | Suffolk      | 291970                |
+| TX     | Tarrant      | 232484                |
+| MI     | Oakland      | 230154                |
+| GA     | Fulton       | 203028                |
+| MI     | Wayne        | 190806                |
+| NY     | Westchester  | 189820                |
+| TX     | Travis       | 186236                |
+| MO     | St. Louis    | 184326                |
++--------+--------------+-----------------------+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Cool! (And, no, I have no idea why Harris county, Texas is apparently the business capitol of the United States.)&lt;/p&gt;
 </description>
     </item>
     
