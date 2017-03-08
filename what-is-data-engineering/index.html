@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+
+
+
+<html>
+    <head>
+            <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> What Is Data Engineering?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="explains what is data engineering" />
+    <meta name="keywords" content="data engineering, data pipelines, NoSQL, Hadoop, Spark, JSON, ETL" />
+
+
+    <meta property="og:title" content="dremio | what is data engineering"/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content="http://www.dremio.com"/>
+    <meta property="og:site_name" content="dremio"/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content="dremio | what is data engineering" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="http://www.dremio.com" />
+    <meta name="twitter:card" content="" />
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+
+
+    <link rel="stylesheet" href="/css/animate.css">
+
+    <link rel="stylesheet" href="/css/icomoon.css">
+
+    <link rel="stylesheet" href="/css/simple-line-icons.css">
+
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="/css/bootstrap.css">
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+
+    <script src="/js/modernizr-2.6.2.min.js"></script>
+
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-92535580-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+    </head>
+    <body>
+
+          <header role="banner" id="fh5co-header" class="navbar-fixed-top fh5co-animated slideInDown">
+        <div class="container">
+
+            <nav class="navbar navbar-default">
+                <div class="navbar-header">
+
+                    <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+                    <a href="/index.html"><img src="/img/dremio-logo-50px.png" class="navbar-logo"/></a>
+                </div>
+        </nav>
+
+    </div>
+</header>
+
+      <br/>
+      <br/>
+      <br/>
+      <div class="container">
+        <div class="overlay"></div>
+        <div class="fh5co-text">
+          <h1>What Is Data Engineering?</h1>
+
+          <h4>published on 0001-01-01</h4>
+
+
+<h2 id="what-is-data-engineering">What is Data Engineering?</h2>
+
+<p>Data is at the center of every business today. Companies use data to answer questions about their businesses, such as:</p>
+
+<ul>
+<li>What’s a new customer worth?</li>
+<li>How can I improve our website?</li>
+<li>What are the fastest-growing product lines?</li>
+</ul>
+
+<p>In most organizations, many different systems create data. Each system may use a different technology, and each has a distinct owner within the organization. For example, consider data about customers:</p>
+
+<ul>
+<li>One system contains information about billing and shipping.</li>
+<li>Another system maintains the history of orders.</li>
+<li>And other systems store customer support, behavioral information, and third-party data.</li>
+</ul>
+
+<p>Together this data provides a full understanding of the customer. However, these different data sets are independent of one another. This makes answering certain questions &ndash; like what types of orders result in the highest customer support costs &ndash; very difficult. This kind of analysis is challenging because the data is managed by different technologies and stored in various structures. Yet, the tools used for analysis assume the data is managed by the same technology, and stored in the same structure.</p>
+
+<p>Even relatively small companies might have millions of customers, and huge amounts of data to comb through to answer these questions. Data engineering is about supporting that process &ndash; making it possible for consumers of data, such as analysts, data scientists, and executives &ndash; to reliably, quickly, and securely inspect all of the data available.</p>
+
+<p><br>
+<br>
+<p style="text-align: center;">
+<img style="max-width: 100%;" src="/img/data-engineering.png">
+</p>
+<p style="text-align: center; font-style: italic;">Data Engineering helps make data more useful and accessible for consumers of data.</p>
+<br>
+<br></p>
+
+<p>Data engineering must source, transform, and analyze data from each system. For example, data stored in a relational database is managed as tables, like an Excel spreadsheet. Each table contains many rows, and all rows have the same columns. A given piece of information, such as a customer order, may be stored across dozens of tables. In contrast, data stored in a NoSQL database such as MongoDB is managed as documents, which are more like Word documents. Each document is flexible and may contain a different set of attributes. When querying the relational database a data engineer would use SQL, whereas MongoDB has a proprietary language that is very different from SQL. Data engineering works with both types of systems, as well as many others, to make it easier for consumers of the data to use all the data together, without mastering all the intricacies of each technology.</p>
+
+<p>For these reasons even simple questions can require complex solutions. Working with each system requires understanding the technology, as well as the data. Once data engineering has sourced and curated the data for a given job, it is much easier to use for consumers of the data.</p>
+
+<h2 id="trends-history">Trends &amp; History</h2>
+
+<p>As companies become more reliant on data, the importance of data engineering continues to grow. Since 2012 Google searches for the phrase &ldquo;data engineering&rdquo; have tripled:</p>
+
+<p><br>
+<br>
+<p style="text-align: center;">
+<img style="max-width: 100%;" src="/img/data-engineering-google-trends.png">
+</p>
+<p style="text-align: center; font-style: italic;">Google searches for Data Engineering. From Google Trends.</p>
+<br>
+<br></p>
+
+<p>And in that time, job postings for data engineers have also increased more than 400%. Just in the past year, they’ve almost doubled.</p>
+
+<p><br>
+<br>
+<p style="text-align: center;">
+<img style="max-width: 100%;" src="/img/data-engineering-indeed.png">
+</p>
+<p style="text-align: center; font-style: italic;">Data Engineering job listings. From indeed.com.</p>
+<br>
+<br></p>
+
+<p>Why?</p>
+
+<ul>
+<li><strong>There’s more data than ever before, and data is growing faster than ever before.</strong> More data was created in the past two years than all prior years combined.</li>
+<li><strong>Data is more valuable to companies, across more business functions.</strong> Sales, marketing, finance and others areas of the business are using data to be more innovative and more effective.</li>
+<li><strong>The technologies used for data are more complex.</strong> Most companies today create data in many systems.  They also use a range of different technologies for their data, including relational databases, Hadoop, and NoSQL.</li>
+<li><strong>Companies are finding more ways to benefit from data.</strong> They use data to understand the current state of the business. They are also using data to predict the future, model their customers, prevent threats, and create new kinds of products. Data engineering is the linchpin in all these activities.</li>
+</ul>
+
+<p>As data becomes more complex, data engineering will continue to grow in importance. And as the demands for data increase, data engineering will become even more critical.</p>
+
+<h2 id="data-engineering-responsibilities">Data Engineering Responsibilities</h2>
+
+<p>Data engineering organizes data to make it easy for other systems and people to use. They work with many different consumers of data, such as:</p>
+
+<ul>
+<li><strong>Data Analysts</strong> answer specific questions about data, or build reports and visualizations so that other people can understand the data more easily.</li>
+<li><strong>Data Scientists</strong> answer more complex questions than data analysts do &ndash; for example, a data scientist might build a model that predicts which customers are likely to purchase a specific item.</li>
+<li><strong>Systems Architects</strong> are responsible for pulling data into the applications they build. For example, an e-commerce store might offer discounts depending on a user&rsquo;s purchase history, and the infrastructure for calculating that discount is built by a Systems Architect.</li>
+<li><strong>Business Leaders</strong> understand what the data means and how others will use it.</li>
+</ul>
+
+<p>Data engineering works with each of these groups to understand their specific needs. The data engineer’s responsibilities include:</p>
+
+<ul>
+<li><strong>Gathering data requirements,</strong> such as how long the data needs to be stored, how it will be used, and what people and systems need access to the data.</li>
+<li><strong>Maintaining metadata about the data,</strong> such as what technology manages the data, the schema, the size, how the data is secured, the source of the data, and the ultimate owner of the data.</li>
+<li><strong>Ensuring security and governance for the data,</strong> using centralized security controls like LDAP, encrypting the data, and auditing access to the data.</li>
+<li><strong>Storing the data,</strong> using specialized technologies that are optimized for the particular use of the data, such as a relational database, a NoSQL database, Hadoop, Amazon S3, or Azure Blog Storage.</li>
+<li><strong>Processing data for specific needs,</strong> using tools that access data from different sources, transform and enrich the data, summarize the data, and store the data in the storage system</li>
+</ul>
+
+<p>To address these responsibilities, data engineering performs many different tasks. Some examples include:</p>
+
+<ul>
+<li><strong>Acquisition.</strong> Sourcing the data from different systems.</li>
+<li><strong>Cleansing.</strong> Detecting and correcting errors.</li>
+<li><strong>Conversion.</strong> Converting data from one format to another.</li>
+<li><strong>Disambiguation.</strong> Interpreting data that has multiple meanings.</li>
+<li><strong>De-duplication.</strong> Removing duplicate copies of data.</li>
+</ul>
+
+<p>It is common to use most or all of these tasks for any data processing job.</p>
+
+<h2 id="what-kinds-of-data-sources-does-data-engineering-use">What Kinds of Data Sources Does Data Engineering Use?</h2>
+
+<p>Companies create data using many different types of technologies. Each technology is specialized for a different purpose &ndash; speed, security, and cost are some of the tradeoffs. Application teams choose the technology that is best suited to the system they are building.  Data engineering must be capable of working with these technologies and the data they produce.</p>
+
+<table>
+<thead>
+<tr>
+<th><strong>Data Source</strong></th>
+<th><strong>Applications</strong></th>
+<th><strong>Data Structures</strong></th>
+<th><strong>Interface</strong></th>
+<th><strong>Vendors</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><strong>Relational databases</strong> (operational)</td>
+<td>HR, CRM, financial planning</td>
+<td>Tables</td>
+<td>SQL</td>
+<td>Oracle, Microsoft SQL Server, IBM DB2</td>
+</tr>
+
+<tr>
+<td><strong>Relational databases</strong> (analytical)</td>
+<td>Data warehouses, data marts</td>
+<td>Tables</td>
+<td>SQL</td>
+<td>Teradata, Vertica, Amazon Redshift, Sybase IQ</td>
+</tr>
+
+<tr>
+<td><strong>JSON databases</strong></td>
+<td>Web, mobile, social</td>
+<td>JSON documents</td>
+<td>Proprietary language</td>
+<td>MongoDB</td>
+</tr>
+
+<tr>
+<td><strong>Key-value systems</strong></td>
+<td>Web, mobile, social</td>
+<td>Objects</td>
+<td>Proprietary language</td>
+<td>Memcached, Redis</td>
+</tr>
+
+<tr>
+<td><strong>Columnar databases</strong></td>
+<td>IoT, machine data</td>
+<td>Column families</td>
+<td>Proprietary language</td>
+<td>Apache Cassandra, Apache HBase</td>
+</tr>
+
+<tr>
+<td><strong>File systems</strong></td>
+<td>Data storage</td>
+<td>Files</td>
+<td>API</td>
+<td>Hadoop Distributed File System (HDFS)</td>
+</tr>
+
+<tr>
+<td><strong>Object stores</strong></td>
+<td>Data storage</td>
+<td>Objects</td>
+<td>API</td>
+<td>Amazon S3, Azure Blob Store</td>
+</tr>
+
+<tr>
+<td><strong>Spreadsheets</strong></td>
+<td>Desktop data analysis</td>
+<td>Worksheets</td>
+<td>API</td>
+<td>Microsoft Excel</td>
+</tr>
+</tbody>
+</table>
+
+<p><br/></p>
+
+<p>Companies also use vendor applications, such as SAP or Microsoft Exchange. These are applications companies run themselves, or services they use in the cloud, such as Salesforce.com or Google G Suite. Vendor applications manage data in a &ldquo;black box.&rdquo; They provide application programming interfaces (APIs) to the data, instead of direct access to the underlying database. APIs are specific to a given application, and each presents a unique set of capabilities and interfaces that require knowledge and following best practices. Furthermore, these APIs evolve over time as new features are added to applications. For example, if your CRM application adds the ability to store the Twitter handle of your customer, the API would change to allow you to access this data. Data engineers must be able to work with these APIs.</p>
+
+<h2 id="what-are-the-key-data-engineering-skills-and-tools">What Are The Key Data Engineering Skills and Tools?</h2>
+
+<p>Data engineers uses specialized tools to work with data. Each system presents specific challenges for the data engineering team. They must consider the way data is modeled, stored, secured, and encoded. Data engineering teams must also understand the most efficient ways to access and manipulate the data.</p>
+
+<p>Data engineering thinks about the end-to-end process as “data pipelines.” Each pipeline has one one or more sources, and one or more destinations. Within the pipeline, data may undergo sever steps of transformation, validation, enrichment, summarization, or other steps. Data engineering creates these pipelines with a variety of technologies such as:</p>
+
+<ul>
+<li><strong>ETL Tools.</strong> Extract Transform Load (ETL) is a category of technologies that move data between systems. These tools access data from many different technologies. They then apply rules to “transform” and cleanse the data so that it is ready for analysis. For example, an ETL process might extract the postal code from an address field and store this value in a new field so that analysis can easily be performed at the postal code level. Finally, they load the data into a destination system for analysis. Examples of ETL products include Informatica and SAP Data Services.<br /></li>
+<li><strong>SQL.</strong> Structured Query Language (SQL) is the standard language for querying relational databases. Data engineering uses SQL to perform ETL tasks within a relational database. SQL is especially useful when the data source and destination are the same type of database. SQL is very popular and well understood by many people and supported by many tools.</li>
+<li><strong>Python.</strong> Python is a general purpose programming language. It has become a popular tool for performing ETL tasks due to its ease of use and extensive libraries for accessing databases and storage technologies. Python can be used instead of ETL tools for ETL tasks. Many data engineers use Python instead of an ETL tool because it is more flexible and more powerful for these tasks.</li>
+<li><strong>Spark &amp; Hadoop.</strong> Spark and Hadoop work with large data sets on clusters of computers. They make it easier to apply the power of many computers working together to perform a job on the data. This capability is especially important when the data is too large to be stored on a single computer. Today Spark and Hadoop are not as easy to use as Python, and there are far more people who know and use Python.</li>
+<li><strong>HDFS &amp; Amazon S3.</strong> Data engineering uses HDFS or Amazon S3 to store data during processing. HDFS and Amazon S3 are specialized file systems that can store an essentially unlimited amount of data, making them useful for data science tasks. They are also inexpensive, which is important as processing generates large volumes of data. Finally, these data storage systems are integrated into environments where the data will be processed. This makes managing data systems much easier.</li>
+</ul>
+
+<p>New data technologies emerge frequently, often delivering significant performance, security or other improvements that let data engineers do their jobs better. Many of these tools are licensed as open source software. Open source projects allow teams across companies to easily collaborate on software projects, and to use these projects with no commercial obligations. Since the early 2000s, many of the largest companies who specialize in data, such as Google and Facebook, have created critical data technologies that they have released to the public as open source projects.</p>
+
+<h2 id="data-engineering-vs-data-science">Data Engineering vs. Data Science</h2>
+
+<p>Data Engineering and Data Science are complementary. Essentially, data engineering ensures that data scientists can look at data reliably and consistently.</p>
+
+<ul>
+<li><strong>Data Scientists</strong> use technologies such as machine learning and data mining. They also use tools like R, Python, and SAS to analyze data in powerful ways. These technologies assume the data is ready for analysis and gathered together in one place. They communicate their insights using charts, graphs, and visualization tools. Data scientists must be able to explain their results to technical and non-technical audiences.</li>
+<li><strong>Data Engineering</strong> uses tools like SQL and Python to make data ready for data scientists. Data engineering works with data scientists to understand their specific needs for a job. They build data pipelines that source and transform the data into the structures needed for analysis. These data pipelines must be well engineered for performance and reliability. This requires a strong understanding of software engineering best practices. Data engineering also uses monitoring and logging to help ensure reliability. They must design for performance and scalability to work with large data sets and demanding SLAs.</li>
+</ul>
+
+<p>Data engineering makes data scientists more productive. Data engineering allows them to focus on what they do best–performing analysis. Without data engineering, data scientists spend the majority of their time preparing data for analysis.</p>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p>With the right tools data engineers can be significantly more productive. Dremio is a new kind of technology designed specifically for data engineering. It simplifies and accelerates access to data. Dremio helps data engineers become more strategic and innovative. Learn more about <a href="http://www.dremio.com">Dremio<a/>.</p>
+
+
+
+        	<footer id="footer" role="contentinfo">
+		<a href="#" class="gotop js-gotop"><i class="icon-arrow-up2"></i></a>
+		<div class="container">
+			<div class="">
+				<div class="col-md-12 text-center">
+					<p>Copyright &copy; Dremio Corporation. All Rights Reserved. Site theme from FreeHTML5.co</p>
+
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<ul class="social social-circle">
+						<li><a href="https://twitter.com/dremiohq"><i class="icon-twitter"></i></a></li>
+						<li><a href="https://www.facebook.com/pages/Dremio/1449887358675068"><i class="icon-facebook"></i></a></li>
+						<li><a href="https://www.linkedin.com/company/dremio"><i class="icon-linkedin"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5848806689cd5d32"></script>
+    </body>
+</html>
