@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+
+
+
+<html>
+    <head>
+            <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Data Engineering - explained by Dremio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="explains what is data engineering" />
+    <meta name="keywords" content="data engineering, data pipelines, NoSQL, Hadoop, Spark, JSON, ETL" />
+
+
+    <meta property="og:title" content="What is data engineering? | Dremio"/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content="http://www.dremio.com"/>
+    <meta property="og:site_name" content="dremio"/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content="dremio | what is data engineering" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="http://www.dremio.com" />
+    <meta name="twitter:card" content="" />
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+
+
+    <link rel="stylesheet" href="/css/animate.css">
+
+    <link rel="stylesheet" href="/css/icomoon.css">
+
+    <link rel="stylesheet" href="/css/simple-line-icons.css">
+
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="/css/bootstrap.css">
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+
+    <script src="/js/modernizr-2.6.2.min.js"></script>
+
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-92535580-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+    </head>
+    <body>
+
+          <header role="banner" id="fh5co-header" class="navbar-fixed-top fh5co-animated slideInDown">
+        <div class="container">
+
+            <nav class="navbar navbar-default">
+                <div class="navbar-header">
+
+                    <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+                    <a href="/index.html"><img src="/img/dremio-logo-50px.png" class="navbar-logo"/></a>
+                </div>
+        </nav>
+
+    </div>
+</header>
+
+      <br/>
+      <br/>
+      <br/>
+      <div class="container">
+        <div class="overlay"></div>
+        <div class="fh5co-text">
+          <h1>What is ETL?</h1>
+
+
+        <p>ETL stands for Extract, Transform, Load. ETL tools move data between systems. If ETL were for people instead of data, it would be public and private transportation. Companies use ETL to safely and reliably move their data from one system to another.</p>
+
+        <p>ETL was created because data usually serves multiple purposes. For example:</p>
+
+        <ul>
+        <li>Data about customers is important for tracking orders. A company needs to understand all of a customer’s recent orders so they can be fulfilled accurately. The system that manages customer orders might be SAP.</li>
+        <li>The same data is also used to understand buying patterns across all customers. For example, what products are selling the most quickly. Or, which product combinations are selling most effectively in each geography. The system that manages analytics might be a data warehouse.</li>
+        <li>The data is the same in both cases, but it is copied into different systems to serve each purpose. In this example, ETL moves the data from SAP to the data warehouse.</li>
+        </ul>
+
+        <p><br>
+        <br>
+        <p style="text-align: center;">
+        <img style="max-width: 100%;" src="/img/etl-pipeline.png">
+        </p>
+        <p style="text-align: center; font-style: italic;">ETL moves data from operational systems like SAP to a data warehouse for analysis.</p>
+        <br>
+        <br></p>
+
+        <p>Each of these end to end processes is called a pipeline. It is common for companies to have dozens or hundreds of ETL pipelines. These pipelines are created and maintained by IT, specifically by the data engineering team, or by ETL engineers. New pipelines are created when business users request access to data for a new need. For example, combining data from orders and the results of a recent advertising campaign.</p>
+
+        <p>Following our example, we can take a closer look at each of the terms:</p>
+
+        <ul>
+        <li><strong>Extract</strong>. In this example, extracting starts with connecting to SAP, which is creating customer order data. The ETL tool needs to understand how the data is stored and its security controls, issue the appropriate queries to read the data, and understand what data has changed since the last extract.</li>
+        <li><strong>Transform</strong>. Usually the data needs to be changed or enhanced to better serve the needs of the downstream user. For example, collapse first name and last name into a new column called “name.” Or, merge the order data with detailed information about customers stored in a different system. Or, include weather data based on location and date of sale to understand if weather is impacting sales. The transform step ranges from very simple changes to the source data, to multi-step processing that interacts with multiple systems.</li>
+        <li><strong>Load</strong>. Once the data is transformed, it is ready to be loaded into the destination system. Typically this is a data warehouse or a data lake. The tool optimizes the load to make it as efficient as possible. This can mean performing “bulk loads” and/or parallel loads that dramatically reduce the total time to load the data. These destination systems are designed for analytical workloads. Business analysts and data scientists connect to the data warehouse with BI tools to analyze and visualize the data.</li>
+        </ul>
+
+        <p>There are many factors to consider when building ETL pipelines. Some examples include:</p>
+
+        <ul>
+        <li><strong>Changes to source data</strong>. Pipelines are designed around a defined data structure, or schema. From time to time the schema of a data source changes. How will the pipeline handle this change?</li>
+        <li><strong>Transformation dependencies</strong>. Pipelines typically involve multiple steps. Each step may be dependent on the outcome of a prior step. For example, determining the closest warehouse for a customer first depends on accurately geocoding their address. When a step fails or produces an unexpected output, how will dependent steps handle this behavior?</li>
+        <li><strong>Changes to pipelines</strong>. It is common for pipelines to evolve over time. As one step in a pipeline changes, it can impact other downstream steps. For example, a pipeline is enhanced to pull data from a third party service that provides traffic data. How will the addition of this new data affect downstream processing?</li>
+        <li><strong>Error handling</strong>. Sometimes unforeseen issues can break a pipeline. For example, corrupt data, or network failures, may produce an error condition. When these situations arise, how should the ETL process behave?</li>
+        <li><strong>Performance tuning</strong>. As data size grows, and as processing steps increase, the total time to process a pipeline can become problematic. For example, when processing a pipeline takes so long that it cannot complete before the next update is scheduled to begin. What is the process for measuring and tuning performance of the ETL process and its pipelines?</li>
+        <li><strong>Scalability</strong>. ETL processing needs to scale in a range of ways. These include input data size, processing steps, third party service invocations, and parallelized data loads. How will scalability requirements be addressed by the ETL process as these needs evolve?</li>
+        </ul>
+
+        <h2 id="types-of-etl-tools">Types of ETL Tools</h2>
+
+        <p>ETL tools have been around for over 30 years. As technology has evolved in that time, different types of solutions have entered the market. There are several pure-play ETL vendors, such as Informatica, who specialize in ETL. Other tools are offered by large software vendors, such as IBM, Oracle, and Microsoft. More recently, open source ETL tools and ETL cloud services have entered the market.</p>
+
+        <h3 id="enterprise-software-etl">Enterprise software ETL</h3>
+
+        <p>Several software companies sell and support commercial software products. These have been around the longest and tend to be the most mature in adoption and functionality. All of these products provide graphical interfaces for designing and executing ETL pipelines. They all connect to most relational databases. Some have support for non-relational data sources such as JSON and XML. Few have support for streaming sources such as Kafka.</p>
+
+        <ul>
+        <li><strong>Informatica PowerCenter</strong>. This product is arguably the most mature ETL product in the market. It is used by many large companies and is well-regarded by industry analysts. It is part of a large portfolio of products, bundled as Informatica Platform. These products are perceived as IT-centric, and they are also very expensive. Informatica is less mature than some other products for semi-structured and unstructured sources.</li>
+        <li><strong>IBM Infosphere DataStage</strong>. DataStage is a very mature ETL product that was acquired from the company Ascential. It is especially popular with IBM shops. Unlike many other ETL tools, it provides strong capabilities for working with mainframe computers. DataStage is perceived as expensive, complex to license, and overlapping with other products in the same family.</li>
+        <li><strong>Oracle Data Integrator (ODI)</strong>. Oracle’s ETL product has been available for many years. It uses a fundamentally different architecture from other ETL products. Instead of performing transformations in the ETL tool itself using a dedicated process and hardware resources, ODI moves data into the destination, then performs transformations using the features of the database or Hadoop cluster.</li>
+        <li><strong>Microsoft SQL Server Integration Services (SSIS)</strong>. SSIS is very popular among users of SQL Server. It is lower in cost than other enterprise ETL tools, and easier to use. SSIS is limited to Windows-only deployments.</li>
+        <li><strong>Ab Initio</strong>. Ab Initio is a highly secretive company based in Lexington MA. The product began as ETL and evolved to provide other offerings, such as metadata catalogs. Ab Initio is proprietary and very expensive. It claims to be higher performance and easier to use than traditional ETL tools.</li>
+        <li><strong>SAP Data Services</strong>. SAP’s ETL tool is designed primarily for moving data between SAP applications. It is not widely used outside of these environments.</li>
+        <li><strong>SAS Data Manager</strong>. SAS has developed an ETL product with strong support for Hadoop, streaming data, and machine learning, but limited support for bulk loading destination systems. Data Manager is perceived as expensive, while SAS is perceived as a vendor with high customer satisfaction.</li>
+        </ul>
+
+        <h3 id="open-source-etl">Open source ETL</h3>
+
+        <p>Over the past 10 years, software developers have created several open source ETL products. These products are free to use. Their source code is also freely available, which allows you to extend or enhance their capabilities. These tools vary significantly in quality, integrations, ease of use, adoption, and availability of support. Like the enterprise ETL tools, many of these open source ETL tools provide a graphical interface for designing and executing pipelines.</p>
+
+        <ul>
+        <li><strong>Talend Open Studio</strong>. Talend’s ETL tool is the most popular open source ETL product. Open Studio generates Java code for ETL pipelines, rather than running pipeline configurations through an ETL engine. This approach gives it some performance advantages.</li>
+        <li><strong>Pentaho Data Integration (PDI)</strong>. Formerly known as Kettle, PDI is an open source ETL tool well known for its graphical interface called Spoon. PDI generates XML files to represent pipelines, and executes pipelines through its ETL engine. Pentaho was acquired by Hitachi Data Systems in 2015.</li>
+        <li><strong>Hadoop</strong>. Hadoop is a general purpose distributed computing platform. It is used to store, manipulate, and analyze data of any structure. Hadoop is a complex ecosystem of open source projects, comprising over 20 different technologies. Some of these projects are used to perform ETL tasks, such as Pig, MapReduce, and Spark. When used for ETL, data is typically first loaded into Hadoop’s Distributed File System (HDFS) “as is” from source systems. Sqoop is a tool used to move data from relational databases into HDFS. Once the data is stored in Hadoop, any of the projects can be used to transform and store the cleansed data in HDFS. Hive is a popular project for using SQL to define these transformations (a Hive query is compiled into MapReduce). Pig and Spark can be used as well. Other projects are used to coordinate multi-step transformations for ETL. The Hadoop ecosystem evolves very quickly, and new projects emerge frequently that are designed to perform data transformation.</li>
+        </ul>
+
+        <h3 id="custom-etl">Custom ETL</h3>
+
+        <p>Many companies use general purpose programming languages to write their own ETL tools. This approach has the greatest flexibility, but also requires the most effort. This approach also requires users to perform their own maintenance, build their own documentation, test, and perform ongoing development. Users of custom ETL often find it difficult to find help from people outside of their own team.</p>
+
+        <ul>
+        <li><strong>SQL</strong>. If your data source and destination are the same, then using SQL is a very powerful option. SQL is very efficient at reading and writing data, as well as performing basic transformations. SQL is not very effective at complex transformations that involve decision trees, or calling external sources, for example. SQL is also built into the database, so no additional license fees or technologies are required. SQL is widely understood by DBAs and developers.</li>
+        <li><strong>Python</strong>. Python is a general purpose programming language. It has become a popular tool for performing ETL tasks due to its ease of use and extensive libraries for accessing databases and storage technologies. Python can be used instead of ETL tools for ETL tasks. Many data engineers use Python instead of an ETL tool because it is more flexible and more powerful for these tasks.</li>
+        <li><strong>Java</strong>. Java is another general purpose programming language that can be used to build ETL processing. Java is one of the most popular programming languages and has extensive support for different data sources and data transformation. Java and Python each present different trade-offs for ETL. When choosing between them existing skills may be the most important factor.</li>
+        <li><strong>Spark &amp; Hadoop</strong>. Spark and Hadoop work with large data sets on clusters of computers. They make it easier to apply the power of many computers working together to perform a job on the data. This capability is especially important when the data is too large to be stored on a single computer. Today Spark and Hadoop are not as easy to use as Python, and there are far more people who know and use Python.</li>
+        </ul>
+
+        <h3 id="etl-cloud-services">ETL cloud services</h3>
+
+        <p>Amazon AWS, Google GCP, and Microsoft Azure offer their own ETL capabilities as cloud services. If your data is in already in one of these cloud platforms, there are a number of advantages to using their ETL services. One important difference is their integration to the proprietary data sources - traditional ETL tools cannot be used to work with data in these systems, or are less mature with these technologies. These services have the advantage of providing tight integrations to other cloud services, elasticity, and use-based pricing. These solutions are also highly proprietary and only work within the framework of the cloud vendor - you cannot use them in a different cloud vendor’s platform, and you cannot move these capabilities to your own data centers.</p>
+
+        <ul>
+        <li><strong>AWS EMR</strong>. Elastic MapReduce (EMR) is the Hadoop offering provided by AWS. Companies running on AWS who like to use Hadoop for ETL or ELT may use EMR. As with any Hadoop distribution, there are several tools available to perform ETL, including Hive and Spark. This solution has the advantages of being very powerful and scalable, and capable of working with structured and unstructured data. It is also elastic and users only pay for what they use. It has the downside of being very difficult to use.</li>
+        <li><strong>AWS Glue</strong>. This is a new fully-managed ETL service AWS announced in late 2016. Glue is targeted at developers. It is tightly integrated into other AWS services, including data sources such as S3, RDS, and Redshift, as well as other services, such as Lambda. Glue can connect to on-prem data sources to help customers move their data to the cloud. ETL pipelines are written in Python and executed using Apache Spark and PySpark. Like most services on AWS, Glue is designed for developers to write code to take advantage of the service, and is highly proprietary - pipelines written in Glue will only work on AWS.<br /></li>
+        <li><strong>Azure Data Factory</strong>.  Data Factory is a fully-managed service that connects to a wide range of cloud and on-prem data sources. It is capable of copying, transforming, and enriching data, then writing the data to Azure data services as a destination. Data Factory also supports Hadoop, Spark, and machine learning as transformation steps.</li>
+        <li><strong>Google Cloud Dataflow</strong>. Dataflow is a fully-managed service targeted at developers for designing batch and continuous ETL jobs. Dataflow provides APIs for Java and Python for developers to connect to Google Cloud sources, apply transformations, and write data into other Google Cloud destinations. Dataflow APIs are based on Apache Beam. Unlike other cloud services, Dataflow does not connect to on-prem sources.</li>
+        <li><strong>Segment</strong>. Segment is a SaaS technology that moves data between systems based on events. Companies use Segment to move data into their data warehouses, and also to move data from one application to another, such as from a marketing automation system into Salesforce. This is not strictly an ETL tool. Segment connects to many sources, including dozens of popular applications as sources and destinations, including data warehouses.</li>
+        <li><strong>Stitch</strong>. Stitch Data is a SaaS provider of ETL that is new to the market and focused on developers. This is built on an open source core called Singer.</li>
+        </ul>
+
+        <h2 id="the-future-of-etl">The Future of ETL</h2>
+
+        <p>The ETL model has been in use for over 30 years - read data from different sources, apply transformations, then save the results in a different system for analytics. Modern hardware and distributed processing create new models for accessing data for analytics. Today Dremio provides a powerful alternative to ETL that puts control in the hands of the business, and dramatically accelerates time to insight. Learn more about <a href="http://www.dremio.com">Dremio</a>.</p>
+
+
+
+
+        	<footer id="footer" role="contentinfo">
+		<a href="#" class="gotop js-gotop"><i class="icon-arrow-up2"></i></a>
+		<div class="container">
+			<div class="">
+				<div class="col-md-12 text-center">
+					<p>Copyright &copy; Dremio Corporation. All Rights Reserved. Site theme from FreeHTML5.co</p>
+
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<ul class="social social-circle">
+						<li><a href="https://twitter.com/dremiohq"><i class="icon-twitter"></i></a></li>
+						<li><a href="https://www.facebook.com/pages/Dremio/1449887358675068"><i class="icon-facebook"></i></a></li>
+						<li><a href="https://www.linkedin.com/company/dremio"><i class="icon-linkedin"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5848806689cd5d32"></script>
+    </body>
+</html>
