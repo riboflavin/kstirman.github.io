@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sentiment on dremio | reimagining data analytics for the modern world</title>
-    <link>localhost:1313</link>
+    <link>http://www.dremio.com/categories/sentiment/index.xml</link>
     <description>Recent content in Sentiment on dremio | reimagining data analytics for the modern world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="#ZgotmplZ" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.dremio.com/categories/sentiment/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Reddit hates George Bush more than Vladimir Putin</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/reddit-hates-george-bush-more-than-vladimir-putin/</link>
       <pubDate>Fri, 29 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/reddit-hates-george-bush-more-than-vladimir-putin/</guid>
       <description>&lt;p&gt;Just as I promised, today I&amp;rsquo;m going to show off that nifty sentiment analysis UDF for Apache Drill that I discussed in
 &lt;a href=&#34;http://www.dremio.com/blog/writing-a-custom-sql-function-for-sentiment-analysis/&#34;&gt;the last article&lt;/a&gt;.&lt;/p&gt;
 
@@ -45,7 +45,7 @@ computed by the star of yesterday&amp;rsquo;s post, the &lt;code&gt;SIMPLESENT()
 are compiled below in Figure 1.&lt;/p&gt;
 
 &lt;p&gt;&lt;p style=&#34;text-align: center;&#34;&gt;
-&lt;img style=&#34;max-width: 100%;&#34; src=&#34;localhost:1313/img/reddit_politicians.png&#34;&gt;
+&lt;img style=&#34;max-width: 100%;&#34; src=&#34;http://www.dremio.com/img/reddit_politicians.png&#34;&gt;
 &lt;/p&gt;
 &lt;p style=&#34;text-align: center; font-style: italic;&#34;&gt;&lt;b&gt;Figure 1&lt;/b&gt;: Sentiment analysis for various politicians based on
 Reddit submission title.&lt;/p&gt;
@@ -68,10 +68,10 @@ average sentiment score achieved by then nominal-Republican Ron Paul.&lt;/p&gt;
     
     <item>
       <title>Writing a custom SQL function for sentiment analysis</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/writing-a-custom-SQL-function-for-sentiment-analysis/</link>
       <pubDate>Thu, 28 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/writing-a-custom-SQL-function-for-sentiment-analysis/</guid>
       <description>
 
 &lt;p&gt;In the world of data analytics a &amp;lsquo;sentiment analysis&amp;rsquo; is any technique that attempts to represent the feelings of users

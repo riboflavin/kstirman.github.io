@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Microsoft on dremio | reimagining data analytics for the modern world</title>
-    <link>localhost:1313</link>
+    <link>http://www.dremio.com/categories/microsoft/index.xml</link>
     <description>Recent content in Microsoft on dremio | reimagining data analytics for the modern world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="#ZgotmplZ" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.dremio.com/categories/microsoft/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Installing Apache Drill on Microsoft Windows</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/installing-Apache-Drill-on-Microsoft-Windows/</link>
       <pubDate>Tue, 08 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/installing-Apache-Drill-on-Microsoft-Windows/</guid>
       <description>&lt;p&gt;Many of my previous articles on the Dremio Blog have assumed that you&amp;rsquo;d be using Apache Drill from within some flavor of
 unix (namely either Linux or OS X), but it&amp;rsquo;s completely possible to install Drill on Microsoft Windows as well. In this
 post I&amp;rsquo;ll cover how to install and run a single-machine instance of Drill on Windows Server 2012 R2.&lt;/p&gt;
@@ -31,7 +31,7 @@ left. Finally, head to the &amp;lsquo;Advanced&amp;rsquo; tab in this new window
 &lt;p&gt;&lt;br&gt;
 &lt;br&gt;
 &lt;p style=&#34;text-align: center;&#34;&gt;
-&lt;img style=&#34;max-width: 100%;&#34; src=&#34;localhost:1313/img/windows_env.png&#34;&gt;
+&lt;img style=&#34;max-width: 100%;&#34; src=&#34;http://www.dremio.com/img/windows_env.png&#34;&gt;
 &lt;/p&gt;
 &lt;p style=&#34;text-align: center; font-style: italic;&#34;&gt;Configuring environment variables in Windows Server 2012.&lt;/p&gt;
 &lt;br&gt;

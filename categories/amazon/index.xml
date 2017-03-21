@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Amazon on dremio | reimagining data analytics for the modern world</title>
-    <link>localhost:1313</link>
+    <link>http://www.dremio.com/categories/amazon/index.xml</link>
     <description>Recent content in Amazon on dremio | reimagining data analytics for the modern world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="#ZgotmplZ" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.dremio.com/categories/amazon/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Bootstrapping an interactive SQL environment on Amazon EMR</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/bootstrapping-an-interactive-SQL-environment-on-Amazon-EMR/</link>
       <pubDate>Tue, 17 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/bootstrapping-an-interactive-SQL-environment-on-Amazon-EMR/</guid>
       <description>&lt;p&gt;Amazon&amp;rsquo;s Elastic MapReduce (EMR) service is a great way to create on-demand Hadoop clusters for ad hoc data analysis.
 The web based interface for the service is simple to use, and at its most basic level creating an EMR cluster is as easy
 as specifying the number and type of machines to use. But you can also instruct each computer to execute something

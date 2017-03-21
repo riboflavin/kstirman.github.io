@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Google Analytics on dremio | reimagining data analytics for the modern world</title>
-    <link>localhost:1313</link>
+    <link>http://www.dremio.com/categories/google-analytics/index.xml</link>
     <description>Recent content in Google Analytics on dremio | reimagining data analytics for the modern world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="#ZgotmplZ" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.dremio.com/categories/google-analytics/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Querying Google Analytics JSON with a custom SQL function</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/querying-google-analytics-JSON-with-a-custom-SQL-function/</link>
       <pubDate>Fri, 30 Oct 2015 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;localhost:1313/blog/using-sql-to-interface-with-google-analytics-data-stored-on-amazon-s3/&#34;&gt;Last time&lt;/a&gt; I wrapped up
+      <guid>http://www.dremio.com/blog/querying-google-analytics-JSON-with-a-custom-SQL-function/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.dremio.com/blog/using-sql-to-interface-with-google-analytics-data-stored-on-amazon-s3/&#34;&gt;Last time&lt;/a&gt; I wrapped up
 by showing you how to look at Google Analytics JSON using a nested SQL query in Apache Drill.  This approach is fine,
 but by implementing a custom function in Drill we can talk to the same data using a much simpler query.&lt;/p&gt;
 
@@ -246,10 +246,10 @@ could improve your data experience!&lt;/p&gt;
     
     <item>
       <title>Using SQL to interface with Google Analytics data stored on Amazon S3</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/using-SQL-to-interface-with-Google-Analytics-data-stored-on-Amazon-S3/</link>
       <pubDate>Tue, 20 Oct 2015 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/using-SQL-to-interface-with-Google-Analytics-data-stored-on-Amazon-S3/</guid>
       <description>
 
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
@@ -289,7 +289,7 @@ Google Analytics to work with a script.&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;
 &lt;br&gt;
 &lt;p style=&#34;text-align: center;&#34;&gt;
-&lt;img style=&#34;max-width: 100%;&#34; src=&#34;localhost:1313/img/analytics.png&#34;&gt;
+&lt;img style=&#34;max-width: 100%;&#34; src=&#34;http://www.dremio.com/img/analytics.png&#34;&gt;
 &lt;/p&gt;
 &lt;p style=&#34;text-align: center; font-style: italic;&#34;&gt;You need to add the email associated with your service account to
 your Google Analytics in order to enable API access from the script.&lt;/p&gt;
@@ -637,7 +637,7 @@ this:&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;While it&amp;rsquo;s definitely possible to interface with the data this way, Apache Drill offers an alternative solution in the
-form of custom user defined functions. In my &lt;a href=&#34;localhost:1313/blog/querying-google-analytics-json-with-a-custom-sql-function/&#34;&gt;next
+form of custom user defined functions. In my &lt;a href=&#34;http://www.dremio.com/blog/querying-google-analytics-json-with-a-custom-sql-function/&#34;&gt;next
 post&lt;/a&gt;, I&amp;rsquo;ll show you how to implement a
 GAHELPER() function that makes working with Google Analytics data from the Drill command line significantly easier.&lt;/p&gt;
 </description>

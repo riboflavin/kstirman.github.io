@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Storage Plugin on dremio | reimagining data analytics for the modern world</title>
-    <link>localhost:1313</link>
+    <link>http://www.dremio.com/categories/storage-plugin/index.xml</link>
     <description>Recent content in Storage Plugin on dremio | reimagining data analytics for the modern world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="#ZgotmplZ" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.dremio.com/categories/storage-plugin/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Configuring Drill&#39;s storage plugins with the REST API</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/configuring-Drills-storage-plugins-with-the-rest-api/</link>
       <pubDate>Wed, 02 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/configuring-Drills-storage-plugins-with-the-rest-api/</guid>
       <description>&lt;p&gt;The Web Console of Apache Drill is an intuitive configuration tool, but it&amp;rsquo;s easy to imagine scenarios where connecting
 to a Drill instance via a browser isn&amp;rsquo;t desirable or even possible (e.g. within a script or in a high security
 environment).&lt;/p&gt;

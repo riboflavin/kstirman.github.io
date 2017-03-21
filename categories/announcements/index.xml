@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Announcements on dremio | reimagining data analytics for the modern world</title>
-    <link>localhost:1313</link>
+    <link>http://www.dremio.com/categories/announcements/index.xml</link>
     <description>Recent content in Announcements on dremio | reimagining data analytics for the modern world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="#ZgotmplZ" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.dremio.com/categories/announcements/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Introducing Apache Arrow: Columnar In-Memory Analytics</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/introducing-apache-arrow-columnar-in-memory-analytics/</link>
       <pubDate>Wed, 17 Feb 2016 16:34:36 -0800</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/introducing-apache-arrow-columnar-in-memory-analytics/</guid>
       <description>
 
 &lt;p&gt;Apache Arrow establishes a de-facto standard for columnar in-memory analytics which will redefine the performance and
@@ -110,7 +110,7 @@ result in faster answers and higher levels of user concurrency.&lt;/p&gt;
 
 &lt;p&gt;&lt;br&gt;
 &lt;p style=&#34;text-align: center;&#34;&gt;
-&lt;img style=&#34;max-width: 65%;&#34; src=&#34;localhost:1313/img/arrow1.png&#34;&gt;
+&lt;img style=&#34;max-width: 65%;&#34; src=&#34;http://www.dremio.com/img/arrow1.png&#34;&gt;
 &lt;/p&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;memory-efficiency&#34;&gt;Memory efficiency&lt;/h3&gt;
@@ -146,7 +146,7 @@ that in many cases, moving data between two systems will have zero overhead.&lt;
 
 &lt;p&gt;&lt;br&gt;
 &lt;p style=&#34;text-align: center;&#34;&gt;
-&lt;img style=&#34;max-width: 100%;&#34; src=&#34;localhost:1313/img/arrow2.png&#34;&gt;
+&lt;img style=&#34;max-width: 100%;&#34; src=&#34;http://www.dremio.com/img/arrow2.png&#34;&gt;
 &lt;/p&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;first-class-support-for-popular-programming-languages&#34;&gt;First-class support for popular programming languages&lt;/h3&gt;

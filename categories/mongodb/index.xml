@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mongodb on dremio | reimagining data analytics for the modern world</title>
-    <link>localhost:1313</link>
+    <link>http://www.dremio.com/categories/mongodb/index.xml</link>
     <description>Recent content in Mongodb on dremio | reimagining data analytics for the modern world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="#ZgotmplZ" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.dremio.com/categories/mongodb/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Setting up an SQL interface to a sharded MongoDB</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/setting-up-an-SQL-interface-to-a-sharded-MongoDB/</link>
       <pubDate>Wed, 02 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/setting-up-an-SQL-interface-to-a-sharded-MongoDB/</guid>
       <description>&lt;p&gt;Salutations, data fans! Today I&amp;rsquo;d like to demonstrate how to use Apache Drill to query a sharded MongoDB database
 running on a computer cluster.&lt;/p&gt;
 
@@ -79,10 +79,10 @@ other&lt;/a&gt; post.&lt;/p&gt;
     
     <item>
       <title>Bless this mess: Working with complicated JSON structure in SQL</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/bless-this-mess-workng-with-complicated-JSON-structure-in-SQL/</link>
       <pubDate>Tue, 01 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/bless-this-mess-workng-with-complicated-JSON-structure-in-SQL/</guid>
       <description>&lt;p&gt;Data you find on the web comes in all formats. From simple CSV to some really creepy-crawly JSON. The data provided by
 the Twitter API to describe a tweet unfortunately falls within the latter category.&lt;/p&gt;
 
@@ -258,10 +258,10 @@ demonstrating how a &amp;lsquo;view&amp;rsquo; can improve the flow and readabil
     
     <item>
       <title>Finding corrupt JSON records in MongoDB</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/finding-corrupt-JSON-records-in-MongoDB/</link>
       <pubDate>Mon, 30 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/finding-corrupt-JSON-records-in-MongoDB/</guid>
       <description>&lt;p&gt;A few weeks ago I mangled a MongoDB collection I was working with by importing a file I&amp;rsquo;d corrupted with a manual edit.
 The change I introduced was small, but serious enough to cause my Drill queries to fail. In this post I&amp;rsquo;m going to
 simulate this situation with an intentionally besmirched JSON file imported into MongoDB.&lt;/p&gt;
@@ -331,10 +331,10 @@ yourself struggling with something that looks like a type error.&lt;/p&gt;
     
     <item>
       <title>Bringing SQL to MongoDB with Apache Drill</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/bringing-SQL-to-MongoDB-with-Apache-Drill/</link>
       <pubDate>Sun, 20 Sep 2015 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/bringing-SQL-to-MongoDB-with-Apache-Drill/</guid>
       <description>
 
 &lt;p&gt;If you’re reading this post, then chances are you’ve found yourself wishing you
@@ -387,7 +387,7 @@ occurred within a region that I defined using the web interface (see Figure 1).&
 &lt;p&gt;&lt;br&gt;
 &lt;br&gt;
 &lt;p style=&#34;text-align: center;&#34;&gt;
-&lt;img style=&#34;max-width: 100%;&#34; src=&#34;localhost:1313/img/earthquake_map.png&#34;&gt;
+&lt;img style=&#34;max-width: 100%;&#34; src=&#34;http://www.dremio.com/img/earthquake_map.png&#34;&gt;
 &lt;/p&gt;
 &lt;p style=&#34;text-align: center; font-style: italic;&#34;&gt;Figure 1: My example data set contains seismic event data from this
 region of the United States. Events date from Jan. 1, 1980 to Dec. 31, 2014.&lt;/p&gt;

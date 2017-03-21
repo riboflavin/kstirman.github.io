@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Troubleshooting on dremio | reimagining data analytics for the modern world</title>
-    <link>localhost:1313</link>
+    <link>http://www.dremio.com/categories/troubleshooting/index.xml</link>
     <description>Recent content in Troubleshooting on dremio | reimagining data analytics for the modern world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="#ZgotmplZ" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.dremio.com/categories/troubleshooting/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Finding corrupt JSON records in MongoDB</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/finding-corrupt-JSON-records-in-MongoDB/</link>
       <pubDate>Mon, 30 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/finding-corrupt-JSON-records-in-MongoDB/</guid>
       <description>&lt;p&gt;A few weeks ago I mangled a MongoDB collection I was working with by importing a file I&amp;rsquo;d corrupted with a manual edit.
 The change I introduced was small, but serious enough to cause my Drill queries to fail. In this post I&amp;rsquo;m going to
 simulate this situation with an intentionally besmirched JSON file imported into MongoDB.&lt;/p&gt;

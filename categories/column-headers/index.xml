@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Column Headers on dremio | reimagining data analytics for the modern world</title>
-    <link>localhost:1313</link>
+    <link>http://www.dremio.com/categories/column-headers/index.xml</link>
     <description>Recent content in Column Headers on dremio | reimagining data analytics for the modern world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="#ZgotmplZ" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.dremio.com/categories/column-headers/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>SQL queries on CSV files with column headers</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/SQL-queries-on-CSV-files-with-column-headers/</link>
       <pubDate>Mon, 23 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/SQL-queries-on-CSV-files-with-column-headers/</guid>
       <description>&lt;p&gt;A new feature of Drill 1.3.0 is the ability to query CSV files using the column names listed in the file&amp;rsquo;s header.&lt;/p&gt;
 
 &lt;p&gt;As an example, let&amp;rsquo;s look at &lt;a href=&#34;http://introcs.cs.princeton.edu/java/data/olympic-medals2012.csv&#34;&gt;this CSV formatted file&lt;/a&gt;

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Magic on dremio | reimagining data analytics for the modern world</title>
-    <link>localhost:1313</link>
+    <link>http://www.dremio.com/categories/magic/index.xml</link>
     <description>Recent content in Magic on dremio | reimagining data analytics for the modern world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="#ZgotmplZ" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.dremio.com/categories/magic/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>White mana cards are cheap and stupid: Querying a database of every Magic card ever made</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/white-mana-cards-are-cheap-and-stupid-querying-a-database-of-every-magic-card-ever-made/</link>
       <pubDate>Thu, 03 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/white-mana-cards-are-cheap-and-stupid-querying-a-database-of-every-magic-card-ever-made/</guid>
       <description>&lt;p&gt;With over 10,000 unique cards and a decade of success behind it, &lt;em&gt;Magic: The Gathering&lt;/em&gt; is still as relevant as ever to
 fans of the collectible card game genre. But how well has &lt;em&gt;Magic&lt;/em&gt; managed to stick to its core design philosophy over
 the years? Today we&amp;rsquo;ll examine this question by analyzing a JSON dump of the text found on every card ever produced.&lt;/p&gt;
@@ -35,7 +35,7 @@ are:&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;
 &lt;br&gt;
 &lt;p style=&#34;text-align: center;&#34;&gt;
-&lt;img style=&#34;max-width: 100%;&#34; src=&#34;localhost:1313/img/mtg_mana.jpg&#34;&gt;
+&lt;img style=&#34;max-width: 100%;&#34; src=&#34;http://www.dremio.com/img/mtg_mana.jpg&#34;&gt;
 &lt;/p&gt;
 &lt;p style=&#34;text-align: center; font-style: italic;&#34;&gt;The mana symbols of &lt;em&gt;Magic: The Gathering&lt;/em&gt;.&lt;br&gt;Source: &lt;a href=&#34;http://archive.wizards.com/Magic/magazine/article.aspx?x=mtg/daily/arcana/719&#34;&gt;http://archive.wizards.com/Magic/magazine/article.aspx?x=mtg/daily/arcana/719&lt;/a&gt;&lt;/p&gt;
 &lt;br&gt;

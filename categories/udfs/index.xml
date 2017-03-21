@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Udfs on dremio | reimagining data analytics for the modern world</title>
-    <link>localhost:1313</link>
+    <link>http://www.dremio.com/categories/udfs/index.xml</link>
     <description>Recent content in Udfs on dremio | reimagining data analytics for the modern world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="#ZgotmplZ" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.dremio.com/categories/udfs/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Parsing EPA vehicle data for linear correlations in MPG ratings</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/parsing-epa-vehicle-data-for-linear-correlations-in-mpg-ratings/</link>
       <pubDate>Thu, 11 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/parsing-epa-vehicle-data-for-linear-correlations-in-mpg-ratings/</guid>
       <description>&lt;p&gt;In &lt;a href=&#34;http://www.dremio.com/blog/calculating-pearsons-r-using-a-custom-sql-function/&#34;&gt;the previous day&amp;rsquo;s post&lt;/a&gt; I
 demonstrated how to code a custom aggregate function that can process two sets of data points into their corresponding
 Pearson&amp;rsquo;s &lt;em&gt;r&lt;/em&gt; value, which is a useful indicator of variable correlation. Today I&amp;rsquo;m going to put that function to the
@@ -214,10 +214,10 @@ do in terms of serious analysis.&lt;/p&gt;
     
     <item>
       <title>Calculating Pearson&#39;s r using a custom SQL function</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/calculating-pearsons-r-using-a-custom-SQL-function/</link>
       <pubDate>Wed, 10 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/calculating-pearsons-r-using-a-custom-SQL-function/</guid>
       <description>&lt;script type=&#34;text/javascript&#34;
  src=&#34;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#34;&gt;
 &lt;/script&gt;
@@ -374,10 +374,10 @@ called, and &lt;code&gt;reset()&lt;/code&gt; is used to determine what the funct
     
     <item>
       <title>Managing variable type nullability</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/managing-variable-type-nullability/</link>
       <pubDate>Tue, 09 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/managing-variable-type-nullability/</guid>
       <description>&lt;p&gt;One day you may find yourself with a custom function for Drill that&amp;rsquo;s very particular about the kind of variables that
 it accepts. In particular, it may hold strong opinions about whether or not a variable is allowed to express a &lt;code&gt;NULL&lt;/code&gt;
 value. In fact it may even be &lt;em&gt;you&lt;/em&gt; who wrote this unavoidably fussy function (SPOILER: This is exactly what happened to
@@ -471,10 +471,10 @@ be putting one of them to work in a post later this week.&lt;/p&gt;
     
     <item>
       <title>Smartest and dumbest subreddits as judged by submission title readability</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/smartest-and-dumbest-subreddits-as-judged-by-submission-title-readibility/</link>
       <pubDate>Sat, 06 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/smartest-and-dumbest-subreddits-as-judged-by-submission-title-readibility/</guid>
       <description>&lt;p&gt;Alright, time to put the readability UDF from &lt;a href=&#34;http://www.dremio.com/blog/querying-for-reading-level-with-a-simple-udf/&#34;&gt;my last
 post&lt;/a&gt; to work on some data! For today&amp;rsquo;s
 analysis, I&amp;rsquo;ll once again use this &lt;a href=&#34;https://www.reddit.com/r/datasets/comments/3mg812/full_reddit_submission_corpus_now_available_2006/&#34;&gt;Reddit submission
@@ -555,10 +555,10 @@ to start using the custom functions you&amp;rsquo;ve written on big data right a
     
     <item>
       <title>Querying for reading level with a simple UDF</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/querying-for-reading-level-with-a-simple-UDF/</link>
       <pubDate>Fri, 05 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/querying-for-reading-level-with-a-simple-UDF/</guid>
       <description>&lt;script type=&#34;text/javascript&#34;
  src=&#34;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#34;&gt;
 &lt;/script&gt;
@@ -670,10 +670,10 @@ final result.&lt;/p&gt;
     
     <item>
       <title>Reddit hates George Bush more than Vladimir Putin</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/reddit-hates-george-bush-more-than-vladimir-putin/</link>
       <pubDate>Fri, 29 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/reddit-hates-george-bush-more-than-vladimir-putin/</guid>
       <description>&lt;p&gt;Just as I promised, today I&amp;rsquo;m going to show off that nifty sentiment analysis UDF for Apache Drill that I discussed in
 &lt;a href=&#34;http://www.dremio.com/blog/writing-a-custom-sql-function-for-sentiment-analysis/&#34;&gt;the last article&lt;/a&gt;.&lt;/p&gt;
 
@@ -705,7 +705,7 @@ computed by the star of yesterday&amp;rsquo;s post, the &lt;code&gt;SIMPLESENT()
 are compiled below in Figure 1.&lt;/p&gt;
 
 &lt;p&gt;&lt;p style=&#34;text-align: center;&#34;&gt;
-&lt;img style=&#34;max-width: 100%;&#34; src=&#34;localhost:1313/img/reddit_politicians.png&#34;&gt;
+&lt;img style=&#34;max-width: 100%;&#34; src=&#34;http://www.dremio.com/img/reddit_politicians.png&#34;&gt;
 &lt;/p&gt;
 &lt;p style=&#34;text-align: center; font-style: italic;&#34;&gt;&lt;b&gt;Figure 1&lt;/b&gt;: Sentiment analysis for various politicians based on
 Reddit submission title.&lt;/p&gt;
@@ -728,10 +728,10 @@ average sentiment score achieved by then nominal-Republican Ron Paul.&lt;/p&gt;
     
     <item>
       <title>Writing a custom SQL function for sentiment analysis</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/writing-a-custom-SQL-function-for-sentiment-analysis/</link>
       <pubDate>Thu, 28 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/writing-a-custom-SQL-function-for-sentiment-analysis/</guid>
       <description>
 
 &lt;p&gt;In the world of data analytics a &amp;lsquo;sentiment analysis&amp;rsquo; is any technique that attempts to represent the feelings of users

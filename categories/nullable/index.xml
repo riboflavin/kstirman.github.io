@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nullable on dremio | reimagining data analytics for the modern world</title>
-    <link>localhost:1313</link>
+    <link>http://www.dremio.com/categories/nullable/index.xml</link>
     <description>Recent content in Nullable on dremio | reimagining data analytics for the modern world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="#ZgotmplZ" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.dremio.com/categories/nullable/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Managing variable type nullability</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/managing-variable-type-nullability/</link>
       <pubDate>Tue, 09 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/managing-variable-type-nullability/</guid>
       <description>&lt;p&gt;One day you may find yourself with a custom function for Drill that&amp;rsquo;s very particular about the kind of variables that
 it accepts. In particular, it may hold strong opinions about whether or not a variable is allowed to express a &lt;code&gt;NULL&lt;/code&gt;
 value. In fact it may even be &lt;em&gt;you&lt;/em&gt; who wrote this unavoidably fussy function (SPOILER: This is exactly what happened to

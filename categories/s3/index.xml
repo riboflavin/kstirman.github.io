@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>S3 on dremio | reimagining data analytics for the modern world</title>
-    <link>localhost:1313</link>
+    <link>http://www.dremio.com/categories/s3/index.xml</link>
     <description>Recent content in S3 on dremio | reimagining data analytics for the modern world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="#ZgotmplZ" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.dremio.com/categories/s3/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>How to query S3 data using Amazon&#39;s S3a library</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/how-to-query-S3-data-using-Amazons-S3a-library/</link>
       <pubDate>Mon, 16 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/how-to-query-S3-data-using-Amazons-S3a-library/</guid>
       <description>&lt;p&gt;Starting with version 1.3.0, Drill has the ability to query files stored on Amazon&amp;rsquo;s S3 cloud storage using the S3a
 library. This is important, because S3a adds support for files bigger than 5 gigabytes (these were unsupported using
 Drill&amp;rsquo;s previous S3n interface).&lt;/p&gt;
@@ -49,10 +49,10 @@ and/or the bucket name so you remember what it&amp;rsquo;s for.&lt;/p&gt;
     
     <item>
       <title>Using SQL to interface with Google Analytics data stored on Amazon S3</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/using-SQL-to-interface-with-Google-Analytics-data-stored-on-Amazon-S3/</link>
       <pubDate>Tue, 20 Oct 2015 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/using-SQL-to-interface-with-Google-Analytics-data-stored-on-Amazon-S3/</guid>
       <description>
 
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
@@ -92,7 +92,7 @@ Google Analytics to work with a script.&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;
 &lt;br&gt;
 &lt;p style=&#34;text-align: center;&#34;&gt;
-&lt;img style=&#34;max-width: 100%;&#34; src=&#34;localhost:1313/img/analytics.png&#34;&gt;
+&lt;img style=&#34;max-width: 100%;&#34; src=&#34;http://www.dremio.com/img/analytics.png&#34;&gt;
 &lt;/p&gt;
 &lt;p style=&#34;text-align: center; font-style: italic;&#34;&gt;You need to add the email associated with your service account to
 your Google Analytics in order to enable API access from the script.&lt;/p&gt;
@@ -440,7 +440,7 @@ this:&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;While it&amp;rsquo;s definitely possible to interface with the data this way, Apache Drill offers an alternative solution in the
-form of custom user defined functions. In my &lt;a href=&#34;localhost:1313/blog/querying-google-analytics-json-with-a-custom-sql-function/&#34;&gt;next
+form of custom user defined functions. In my &lt;a href=&#34;http://www.dremio.com/blog/querying-google-analytics-json-with-a-custom-sql-function/&#34;&gt;next
 post&lt;/a&gt;, I&amp;rsquo;ll show you how to implement a
 GAHELPER() function that makes working with Google Analytics data from the Drill command line significantly easier.&lt;/p&gt;
 </description>

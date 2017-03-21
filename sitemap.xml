@@ -2,763 +2,763 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/what-is-data-warehouse/</loc>
     <lastmod>2017-03-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/etl-tools-explained/</loc>
     <lastmod>2017-03-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/what-is-data-engineering/</loc>
     <lastmod>2017-03-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/bi-on-big-data-what-are-your-options/</loc>
     <lastmod>2016-06-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/introducing-apache-arrow-columnar-in-memory-analytics/</loc>
     <lastmod>2016-02-17T16:34:36-08:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/parsing-epa-vehicle-data-for-linear-correlations-in-mpg-ratings/</loc>
     <lastmod>2016-02-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/what-can-ligo-see-lets-look-at-gravitational-waves-with-sql/</loc>
     <lastmod>2016-02-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/calculating-pearsons-r-using-a-custom-SQL-function/</loc>
     <lastmod>2016-02-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/managing-variable-type-nullability/</loc>
     <lastmod>2016-02-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/smartest-and-dumbest-subreddits-as-judged-by-submission-title-readibility/</loc>
     <lastmod>2016-02-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/querying-for-reading-level-with-a-simple-UDF/</loc>
     <lastmod>2016-02-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/the-case-of-the-stolen-candy-hearts-advanced-date-parsing-in-sql/</loc>
     <lastmod>2016-02-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/reddit-hates-george-bush-more-than-vladimir-putin/</loc>
     <lastmod>2016-01-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/writing-a-custom-SQL-function-for-sentiment-analysis/</loc>
     <lastmod>2016-01-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/securing-SQL-on-Hadoop-part-2-installing-and-configuring-Drill/</loc>
     <lastmod>2016-01-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/securing-SQL-on-Hadoop-part-1-installing-CDH-and-Kerberos/</loc>
     <lastmod>2016-01-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/Drill-plays-the-classics-querying-musical-compositions-with-SQL/</loc>
     <lastmod>2016-01-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/using-a-SQL-join-on-two-CSV-files/</loc>
     <lastmod>2016-01-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/SQL-on-Kudu-quickstart/</loc>
     <lastmod>2016-01-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/old-and-busted-tesasing-formery-fashionable-websites-from-Reddit-data/</loc>
     <lastmod>2016-01-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/predicting-international-space-station-solar-transits-using-built-in-SQL-math-functions/</loc>
     <lastmod>2015-12-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/tuning-Parquet-file-performance/</loc>
     <lastmod>2015-12-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/examining-US-radio-antenna-locations-with-Tableau-desktop-9/</loc>
     <lastmod>2015-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/installing-Apache-Drill-on-Microsoft-Windows/</loc>
     <lastmod>2015-12-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/performing-basic-statistics-operations-on-Twitter-data/</loc>
     <lastmod>2015-12-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/querying-dates-using-SQL-in-a-JSON-document/</loc>
     <lastmod>2015-12-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/white-mana-cards-are-cheap-and-stupid-querying-a-database-of-every-magic-card-ever-made/</loc>
     <lastmod>2015-12-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/configuring-Drills-storage-plugins-with-the-rest-api/</loc>
     <lastmod>2015-12-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/setting-up-an-SQL-interface-to-a-sharded-MongoDB/</loc>
     <lastmod>2015-12-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/bless-this-mess-workng-with-complicated-JSON-structure-in-SQL/</loc>
     <lastmod>2015-12-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/SQL-and-Parquet-a-simple-demo/</loc>
     <lastmod>2015-12-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/finding-corrupt-JSON-records-in-MongoDB/</loc>
     <lastmod>2015-11-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/SQL-queries-on-CSV-files-with-column-headers/</loc>
     <lastmod>2015-11-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/bootstrapping-an-interactive-SQL-environment-on-Amazon-EMR/</loc>
     <lastmod>2015-11-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/how-to-query-S3-data-using-Amazons-S3a-library/</loc>
     <lastmod>2015-11-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/querying-google-analytics-JSON-with-a-custom-SQL-function/</loc>
     <lastmod>2015-10-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/using-SQL-to-interface-with-Google-Analytics-data-stored-on-Amazon-S3/</loc>
     <lastmod>2015-10-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/running-SQL-queries-on-CSV-files-using-Apache-Drill/</loc>
     <lastmod>2015-10-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/bringing-SQL-to-MongoDB-with-Apache-Drill/</loc>
     <lastmod>2015-09-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/etl-tools-explained/</loc>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/jobs/</loc>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/what-is-data-engineering/</loc>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/what-is-data-warehouse/</loc>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/amazon/</loc>
     <lastmod>2015-11-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/analysis/</loc>
     <lastmod>2016-01-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/anaylsis/</loc>
     <lastmod>2016-01-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/announcements/</loc>
     <lastmod>2016-02-17T16:34:36-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/apache/</loc>
     <lastmod>2016-02-17T16:34:36-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/apache-arrow/</loc>
     <lastmod>2016-02-17T16:34:36-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/apache-incubator/</loc>
     <lastmod>2016-01-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/astrophysics/</loc>
     <lastmod>2016-02-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/aws/</loc>
     <lastmod>2016-01-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/bi/</loc>
     <lastmod>2016-06-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/big-data/</loc>
     <lastmod>2016-06-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/blog/</loc>
     <lastmod>2017-03-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/browser/</loc>
     <lastmod>2015-12-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/business-intelligence/</loc>
     <lastmod>2016-06-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/cars/</loc>
     <lastmod>2016-02-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/cdh/</loc>
     <lastmod>2016-01-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/cloudera/</loc>
     <lastmod>2016-01-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/cluster/</loc>
     <lastmod>2016-01-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/column-headers/</loc>
     <lastmod>2015-11-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/console/</loc>
     <lastmod>2015-12-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/correlation-coefficient/</loc>
     <lastmod>2016-02-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/crime/</loc>
     <lastmod>2016-02-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/csv/</loc>
     <lastmod>2016-01-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/custom-functions/</loc>
     <lastmod>2016-02-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/data/</loc>
     <lastmod>2015-12-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/database/</loc>
     <lastmod>2015-12-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/date/</loc>
     <lastmod>2016-02-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/debugging/</loc>
     <lastmod>2015-11-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/dremio/</loc>
     <lastmod>2016-06-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/drill/</loc>
     <lastmod>2016-02-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/ec2/</loc>
     <lastmod>2016-01-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/emr/</loc>
     <lastmod>2015-11-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/epa/</loc>
     <lastmod>2016-02-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/etl/</loc>
     <lastmod>2016-06-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/files/</loc>
     <lastmod>2016-01-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/format/</loc>
     <lastmod>2016-02-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/functions/</loc>
     <lastmod>2015-12-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/games/</loc>
     <lastmod>2015-12-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/google-analytics/</loc>
     <lastmod>2015-10-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/gravity-waves/</loc>
     <lastmod>2016-02-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/hadoop/</loc>
     <lastmod>2016-01-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/hdfs/</loc>
     <lastmod>2016-01-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/install/</loc>
     <lastmod>2015-12-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/java/</loc>
     <lastmod>2016-01-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/join/</loc>
     <lastmod>2016-01-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/json/</loc>
     <lastmod>2015-12-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/kerberos/</loc>
     <lastmod>2016-01-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/kudu/</loc>
     <lastmod>2016-01-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/ligo/</loc>
     <lastmod>2016-02-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/magic/</loc>
     <lastmod>2015-12-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/math/</loc>
     <lastmod>2015-12-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/microsoft/</loc>
     <lastmod>2015-12-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/midi/</loc>
     <lastmod>2016-01-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/mongodb/</loc>
     <lastmod>2015-12-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/mpg/</loc>
     <lastmod>2016-02-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/music/</loc>
     <lastmod>2016-01-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/null/</loc>
     <lastmod>2016-02-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/nullable/</loc>
     <lastmod>2016-02-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/olap/</loc>
     <lastmod>2016-06-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/parquet/</loc>
     <lastmod>2015-12-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/pearsons-r/</loc>
     <lastmod>2016-02-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/performance/</loc>
     <lastmod>2015-12-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/physics/</loc>
     <lastmod>2016-02-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/plugins/</loc>
     <lastmod>2015-12-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/popular-websites/</loc>
     <lastmod>2016-01-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/qlik/</loc>
     <lastmod>2016-06-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/readability/</loc>
     <lastmod>2016-02-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/reddit/</loc>
     <lastmod>2016-02-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/rest/</loc>
     <lastmod>2015-12-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/s3/</loc>
     <lastmod>2015-11-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/s3a/</loc>
     <lastmod>2015-11-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/san-francisco/</loc>
     <lastmod>2016-02-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/science/</loc>
     <lastmod>2016-02-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/sentiment/</loc>
     <lastmod>2016-01-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/sharded/</loc>
     <lastmod>2015-12-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/sql/</loc>
     <lastmod>2016-02-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/statistics/</loc>
     <lastmod>2016-02-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/storage-plugin/</loc>
     <lastmod>2015-12-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/tableau/</loc>
     <lastmod>2016-06-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/text/</loc>
     <lastmod>2016-02-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/time/</loc>
     <lastmod>2016-02-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/trig/</loc>
     <lastmod>2015-12-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/troubleshooting/</loc>
     <lastmod>2015-11-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/twitter/</loc>
     <lastmod>2015-12-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/type/</loc>
     <lastmod>2015-12-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/types/</loc>
     <lastmod>2016-02-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/udfs/</loc>
     <lastmod>2016-02-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/variables/</loc>
     <lastmod>2016-02-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/views/</loc>
     <lastmod>2016-01-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/categories/windows/</loc>
     <lastmod>2015-12-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>localhost:1313</loc>
+    <loc>http://www.dremio.com/</loc>
     <lastmod>2017-03-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

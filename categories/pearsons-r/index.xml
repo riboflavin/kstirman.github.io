@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pearsons R on dremio | reimagining data analytics for the modern world</title>
-    <link>localhost:1313</link>
+    <link>http://www.dremio.com/categories/pearsons-r/index.xml</link>
     <description>Recent content in Pearsons R on dremio | reimagining data analytics for the modern world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="#ZgotmplZ" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.dremio.com/categories/pearsons-r/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Parsing EPA vehicle data for linear correlations in MPG ratings</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/parsing-epa-vehicle-data-for-linear-correlations-in-mpg-ratings/</link>
       <pubDate>Thu, 11 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/parsing-epa-vehicle-data-for-linear-correlations-in-mpg-ratings/</guid>
       <description>&lt;p&gt;In &lt;a href=&#34;http://www.dremio.com/blog/calculating-pearsons-r-using-a-custom-sql-function/&#34;&gt;the previous day&amp;rsquo;s post&lt;/a&gt; I
 demonstrated how to code a custom aggregate function that can process two sets of data points into their corresponding
 Pearson&amp;rsquo;s &lt;em&gt;r&lt;/em&gt; value, which is a useful indicator of variable correlation. Today I&amp;rsquo;m going to put that function to the
@@ -214,10 +214,10 @@ do in terms of serious analysis.&lt;/p&gt;
     
     <item>
       <title>Calculating Pearson&#39;s r using a custom SQL function</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/calculating-pearsons-r-using-a-custom-SQL-function/</link>
       <pubDate>Wed, 10 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/calculating-pearsons-r-using-a-custom-SQL-function/</guid>
       <description>&lt;script type=&#34;text/javascript&#34;
  src=&#34;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#34;&gt;
 &lt;/script&gt;

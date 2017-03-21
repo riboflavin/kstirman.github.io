@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Join on dremio | reimagining data analytics for the modern world</title>
-    <link>localhost:1313</link>
+    <link>http://www.dremio.com/categories/join/index.xml</link>
     <description>Recent content in Join on dremio | reimagining data analytics for the modern world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="#ZgotmplZ" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.dremio.com/categories/join/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Using a SQL JOIN on two CSV files</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/using-a-SQL-join-on-two-CSV-files/</link>
       <pubDate>Tue, 19 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/using-a-SQL-join-on-two-CSV-files/</guid>
       <description>&lt;p&gt;One of Drill&amp;rsquo;s great strengths is its ability to unite sets of information found in different places. In today&amp;rsquo;s article
 I&amp;rsquo;ll provide a quick example of this functionality by showing you how to you use Drill to quickly improve the interface
 to some found data.&lt;/p&gt;

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Anaylsis on dremio | reimagining data analytics for the modern world</title>
-    <link>localhost:1313</link>
+    <link>http://www.dremio.com/categories/anaylsis/index.xml</link>
     <description>Recent content in Anaylsis on dremio | reimagining data analytics for the modern world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="#ZgotmplZ" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.dremio.com/categories/anaylsis/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Writing a custom SQL function for sentiment analysis</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/writing-a-custom-SQL-function-for-sentiment-analysis/</link>
       <pubDate>Thu, 28 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/writing-a-custom-SQL-function-for-sentiment-analysis/</guid>
       <description>
 
 &lt;p&gt;In the world of data analytics a &amp;lsquo;sentiment analysis&amp;rsquo; is any technique that attempts to represent the feelings of users

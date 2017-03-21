@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Popular Websites on dremio | reimagining data analytics for the modern world</title>
-    <link>localhost:1313</link>
+    <link>http://www.dremio.com/categories/popular-websites/index.xml</link>
     <description>Recent content in Popular Websites on dremio | reimagining data analytics for the modern world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="#ZgotmplZ" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.dremio.com/categories/popular-websites/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Old and busted: Teasing formerly-fashionable websites from Reddit data</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/old-and-busted-tesasing-formery-fashionable-websites-from-Reddit-data/</link>
       <pubDate>Sun, 03 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/old-and-busted-tesasing-formery-fashionable-websites-from-Reddit-data/</guid>
       <description>&lt;p&gt;Anyone who spends even a little bit of time on the Internet knows how fickle and volatile the cultural scene is. And
 there&amp;rsquo;s perhaps no greater exemplar of this volatility than Reddit. For good or bad, Reddit communities often serve as
 tastemakers for the Internet at large. If your content is visible on Reddit, chances are that things are going great for
@@ -79,7 +79,7 @@ collapsed business model, and an outright ban of the URL from Reddit by site adm
 
 &lt;p&gt;&lt;br&gt;
 &lt;p style=&#34;text-align: center;&#34;&gt;
-&lt;img style=&#34;max-width: 80%;&#34; src=&#34;localhost:1313/img/reddit_url_table.png&#34;&gt;
+&lt;img style=&#34;max-width: 80%;&#34; src=&#34;http://www.dremio.com/img/reddit_url_table.png&#34;&gt;
 &lt;/p&gt;
 &lt;p style=&#34;text-align: center; font-style: italic;&#34;&gt;&lt;b&gt;Table 1&lt;/b&gt;: A selection of formerly-fashionable websites
 submitted to Reddit, and the suspected reason for their fall from grace.&lt;/p&gt;

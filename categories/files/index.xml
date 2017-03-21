@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Files on dremio | reimagining data analytics for the modern world</title>
-    <link>localhost:1313</link>
+    <link>http://www.dremio.com/categories/files/index.xml</link>
     <description>Recent content in Files on dremio | reimagining data analytics for the modern world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="#ZgotmplZ" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.dremio.com/categories/files/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Using a SQL JOIN on two CSV files</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/using-a-SQL-join-on-two-CSV-files/</link>
       <pubDate>Tue, 19 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/using-a-SQL-join-on-two-CSV-files/</guid>
       <description>&lt;p&gt;One of Drill&amp;rsquo;s great strengths is its ability to unite sets of information found in different places. In today&amp;rsquo;s article
 I&amp;rsquo;ll provide a quick example of this functionality by showing you how to you use Drill to quickly improve the interface
 to some found data.&lt;/p&gt;
@@ -101,10 +101,10 @@ ORDER BY `total establishments`
     
     <item>
       <title>Tuning Parquet file performance</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/tuning-Parquet-file-performance/</link>
       <pubDate>Sun, 13 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/tuning-Parquet-file-performance/</guid>
       <description>&lt;p&gt;Today I&amp;rsquo;d like to pursue a brief discussion about how changing the size of a Parquet file&amp;rsquo;s &amp;lsquo;row group&amp;rsquo; to match a file
 system&amp;rsquo;s block size can effect the efficiency of read and write performance. This tweak can be especially important on
 HDFS environments in which I/O is intrinsically tied to network operations. (Note: If you&amp;rsquo;d first like to learn about
@@ -118,7 +118,7 @@ For this let&amp;rsquo;s refer to Figure 1, which is a simple illustration of th
 &lt;p&gt;&lt;br&gt;
 &lt;br&gt;
 &lt;p style=&#34;text-align: center;&#34;&gt;
-&lt;img style=&#34;max-width: 100%;&#34; src=&#34;localhost:1313/img/parquet_block1.png&#34;&gt;
+&lt;img style=&#34;max-width: 100%;&#34; src=&#34;http://www.dremio.com/img/parquet_block1.png&#34;&gt;
 &lt;/p&gt;
 &lt;p style=&#34;text-align: center; font-style: italic;&#34;&gt;Figure 1: The basic anatomy of a Parquet file. The left file contains
 one row group, while the right is comprised of several.&lt;/p&gt;
@@ -139,7 +139,7 @@ columnar storage format.&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;
 &lt;br&gt;
 &lt;p style=&#34;text-align: center;&#34;&gt;
-&lt;img style=&#34;max-width: 100%;&#34; src=&#34;localhost:1313/img/parquet_block2.png&#34;&gt;
+&lt;img style=&#34;max-width: 100%;&#34; src=&#34;http://www.dremio.com/img/parquet_block2.png&#34;&gt;
 &lt;/p&gt;
 &lt;p style=&#34;text-align: center; font-style: italic;&#34;&gt;Figure 2: Three different Parquet storage scenarios for an HDFS file
 system.&lt;/p&gt;
@@ -166,10 +166,10 @@ enhances an already potent symbiosis!&lt;/p&gt;
     
     <item>
       <title>SQL and Parquet: A simple demo</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/SQL-and-Parquet-a-simple-demo/</link>
       <pubDate>Tue, 01 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/SQL-and-Parquet-a-simple-demo/</guid>
       <description>&lt;p&gt;For data wranglers wishing to store large amounts of text or numeric entries in an efficient fashion, the Apache Parquet
 file format makes for an obvious choice. As a storage medium, Parquet has two important benefits afforded by its
 columnar structure: 1.) Access to data columns can be made on an &amp;lsquo;as needed&amp;rsquo; basis, increasing the overall speed of
@@ -243,10 +243,10 @@ Blog in the near future.&lt;/p&gt;
     
     <item>
       <title>SQL queries on CSV files with column headers</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/SQL-queries-on-CSV-files-with-column-headers/</link>
       <pubDate>Mon, 23 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/SQL-queries-on-CSV-files-with-column-headers/</guid>
       <description>&lt;p&gt;A new feature of Drill 1.3.0 is the ability to query CSV files using the column names listed in the file&amp;rsquo;s header.&lt;/p&gt;
 
 &lt;p&gt;As an example, let&amp;rsquo;s look at &lt;a href=&#34;http://introcs.cs.princeton.edu/java/data/olympic-medals2012.csv&#34;&gt;this CSV formatted file&lt;/a&gt;

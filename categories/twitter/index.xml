@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Twitter on dremio | reimagining data analytics for the modern world</title>
-    <link>localhost:1313</link>
+    <link>http://www.dremio.com/categories/twitter/index.xml</link>
     <description>Recent content in Twitter on dremio | reimagining data analytics for the modern world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="#ZgotmplZ" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.dremio.com/categories/twitter/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Performing basic statistics operations on Twitter data</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/performing-basic-statistics-operations-on-Twitter-data/</link>
       <pubDate>Thu, 03 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/performing-basic-statistics-operations-on-Twitter-data/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve used Drill&amp;rsquo;s &lt;code&gt;AVG()&lt;/code&gt; function quite a bit previously, but in this post I&amp;rsquo;d like to point out some other basic
 statistics operations you can do in Drill.&lt;/p&gt;
 

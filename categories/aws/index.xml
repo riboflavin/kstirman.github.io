@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Aws on dremio | reimagining data analytics for the modern world</title>
-    <link>localhost:1313</link>
+    <link>http://www.dremio.com/categories/aws/index.xml</link>
     <description>Recent content in Aws on dremio | reimagining data analytics for the modern world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="#ZgotmplZ" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.dremio.com/categories/aws/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Securing SQL on Hadoop, Part 2: Installing and configuring Drill</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/securing-SQL-on-Hadoop-part-2-installing-and-configuring-Drill/</link>
       <pubDate>Mon, 25 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/securing-SQL-on-Hadoop-part-2-installing-and-configuring-Drill/</guid>
       <description>
 
 &lt;p&gt;Today we&amp;rsquo;re going to pick up where we left off in &lt;a href=&#34;http://www.dremio.com/blog/securing-sql-on-hadoop-part-1-installing-cdh-and-kerberos/&#34;&gt;Part
@@ -153,10 +153,10 @@ information about Kerberos-Drill configuration!&lt;/em&gt;&lt;/p&gt;
     
     <item>
       <title>Securing SQL on Hadoop, Part 1: Installing CDH and Kerberos</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/securing-SQL-on-Hadoop-part-1-installing-CDH-and-Kerberos/</link>
       <pubDate>Fri, 22 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/securing-SQL-on-Hadoop-part-1-installing-CDH-and-Kerberos/</guid>
       <description>
 
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
@@ -283,7 +283,7 @@ this stuff for you in the end.&lt;/p&gt;
 
 &lt;p&gt;&lt;br&gt;
 &lt;p style=&#34;text-align: center;&#34;&gt;
-&lt;img style=&#34;max-width: 100%;&#34; src=&#34;localhost:1313/img/cloudera_kerberos.jpg&#34;&gt;
+&lt;img style=&#34;max-width: 100%;&#34; src=&#34;http://www.dremio.com/img/cloudera_kerberos.jpg&#34;&gt;
 &lt;/p&gt;
 &lt;p style=&#34;text-align: center; font-style: italic;&#34;&gt;&lt;b&gt;Figure 1&lt;/b&gt;: Starting Cloudera Manager&amp;rsquo;s Kerberos wizard.&lt;/p&gt;
 &lt;br&gt;&lt;/p&gt;
@@ -312,10 +312,10 @@ Drill on this system so that we can perform the secure SQL queries that I advert
     
     <item>
       <title>Bootstrapping an interactive SQL environment on Amazon EMR</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/bootstrapping-an-interactive-SQL-environment-on-Amazon-EMR/</link>
       <pubDate>Tue, 17 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/bootstrapping-an-interactive-SQL-environment-on-Amazon-EMR/</guid>
       <description>&lt;p&gt;Amazon&amp;rsquo;s Elastic MapReduce (EMR) service is a great way to create on-demand Hadoop clusters for ad hoc data analysis.
 The web based interface for the service is simple to use, and at its most basic level creating an EMR cluster is as easy
 as specifying the number and type of machines to use. But you can also instruct each computer to execute something
@@ -360,10 +360,10 @@ great place to start.&lt;/p&gt;
     
     <item>
       <title>How to query S3 data using Amazon&#39;s S3a library</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/how-to-query-S3-data-using-Amazons-S3a-library/</link>
       <pubDate>Mon, 16 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/how-to-query-S3-data-using-Amazons-S3a-library/</guid>
       <description>&lt;p&gt;Starting with version 1.3.0, Drill has the ability to query files stored on Amazon&amp;rsquo;s S3 cloud storage using the S3a
 library. This is important, because S3a adds support for files bigger than 5 gigabytes (these were unsupported using
 Drill&amp;rsquo;s previous S3n interface).&lt;/p&gt;

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Apache Incubator on dremio | reimagining data analytics for the modern world</title>
-    <link>localhost:1313</link>
+    <link>http://www.dremio.com/categories/apache-incubator/index.xml</link>
     <description>Recent content in Apache Incubator on dremio | reimagining data analytics for the modern world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="#ZgotmplZ" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.dremio.com/categories/apache-incubator/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>SQL on Kudu quickstart</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/SQL-on-Kudu-quickstart/</link>
       <pubDate>Wed, 13 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/SQL-on-Kudu-quickstart/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://getkudu.io/&#34;&gt;Kudu&lt;/a&gt; is a new (currently in beta) distributed data storage system that attempts to unify the
 strengths of HBase and HDFS systems. Although initially developed at Cloudera, the software has recently been inducted
 into the Apache Incubator program. This means there&amp;rsquo;s a reasonable expectation of Kudu becoming the next big Next Big

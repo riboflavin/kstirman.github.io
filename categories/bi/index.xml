@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bi on dremio | reimagining data analytics for the modern world</title>
-    <link>localhost:1313</link>
+    <link>http://www.dremio.com/categories/bi/index.xml</link>
     <description>Recent content in Bi on dremio | reimagining data analytics for the modern world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="#ZgotmplZ" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.dremio.com/categories/bi/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>BI on Big Data: What are your options?</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/bi-on-big-data-what-are-your-options/</link>
       <pubDate>Wed, 08 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/bi-on-big-data-what-are-your-options/</guid>
       <description>&lt;p&gt;Deciding what combination of technologies will yield the best &amp;lsquo;BI on Big Data&amp;rsquo; experience can be a major challenge for
 data professionals. This presentation, given by Dremio CEO Tomer Shiran at Strata + Hadoop World London, aims to shed
 some light on some of the solutions that are available in the space.&lt;/p&gt;

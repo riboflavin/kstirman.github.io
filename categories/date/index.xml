@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Date on dremio | reimagining data analytics for the modern world</title>
-    <link>localhost:1313</link>
+    <link>http://www.dremio.com/categories/date/index.xml</link>
     <description>Recent content in Date on dremio | reimagining data analytics for the modern world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="#ZgotmplZ" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.dremio.com/categories/date/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>The case of the stolen candy hearts: Advanced date parsing in SQL</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/the-case-of-the-stolen-candy-hearts-advanced-date-parsing-in-sql/</link>
       <pubDate>Tue, 02 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/the-case-of-the-stolen-candy-hearts-advanced-date-parsing-in-sql/</guid>
       <description>&lt;p&gt;The other day I had 12 years of &lt;a href=&#34;https://data.sfgov.org/Public-Safety/Map-Crime-Incidents-from-1-Jan-2003/gxxq-x39z&#34;&gt;San Francisco crime
 data&lt;/a&gt; loaded in Drill and I wanted
 to answer the following question: Which days from recent years have the highest incidences of crime?&lt;/p&gt;
@@ -84,10 +84,10 @@ give it to them!&lt;/p&gt;
     
     <item>
       <title>Querying dates using SQL in a JSON document</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/querying-dates-using-SQL-in-a-JSON-document/</link>
       <pubDate>Thu, 03 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/querying-dates-using-SQL-in-a-JSON-document/</guid>
       <description>&lt;p&gt;In this article we&amp;rsquo;re going to use Apache Drill to bend TIME ITSELF to our every whim. Or wait, not TIME ITSELF. I
 meant, er&amp;hellip; TIMESTAMPS. Don&amp;rsquo;t worry&amp;mdash;that&amp;rsquo;s still pretty useful.&lt;/p&gt;
 

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Midi on dremio | reimagining data analytics for the modern world</title>
-    <link>localhost:1313</link>
+    <link>http://www.dremio.com/categories/midi/index.xml</link>
     <description>Recent content in Midi on dremio | reimagining data analytics for the modern world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="#ZgotmplZ" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.dremio.com/categories/midi/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Drill plays the classics: Querying musical compositions with SQL</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/Drill-plays-the-classics-querying-musical-compositions-with-SQL/</link>
       <pubDate>Thu, 21 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/Drill-plays-the-classics-querying-musical-compositions-with-SQL/</guid>
       <description>&lt;p&gt;Today in &amp;lsquo;Wow, I never expected to use SQL for &lt;em&gt;that!&lt;/em&gt;,&amp;rsquo; I&amp;rsquo;m going to show how you can use Drill (along with a simple
 command line utility) to analyze musical compositions for sound and style characteristics.&lt;/p&gt;
 

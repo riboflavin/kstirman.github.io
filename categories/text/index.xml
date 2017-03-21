@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Text on dremio | reimagining data analytics for the modern world</title>
-    <link>localhost:1313</link>
+    <link>http://www.dremio.com/categories/text/index.xml</link>
     <description>Recent content in Text on dremio | reimagining data analytics for the modern world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="#ZgotmplZ" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.dremio.com/categories/text/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Smartest and dumbest subreddits as judged by submission title readability</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/smartest-and-dumbest-subreddits-as-judged-by-submission-title-readibility/</link>
       <pubDate>Sat, 06 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/smartest-and-dumbest-subreddits-as-judged-by-submission-title-readibility/</guid>
       <description>&lt;p&gt;Alright, time to put the readability UDF from &lt;a href=&#34;http://www.dremio.com/blog/querying-for-reading-level-with-a-simple-udf/&#34;&gt;my last
 post&lt;/a&gt; to work on some data! For today&amp;rsquo;s
 analysis, I&amp;rsquo;ll once again use this &lt;a href=&#34;https://www.reddit.com/r/datasets/comments/3mg812/full_reddit_submission_corpus_now_available_2006/&#34;&gt;Reddit submission
@@ -94,10 +94,10 @@ to start using the custom functions you&amp;rsquo;ve written on big data right a
     
     <item>
       <title>Querying for reading level with a simple UDF</title>
-      <link>localhost:1313</link>
+      <link>http://www.dremio.com/blog/querying-for-reading-level-with-a-simple-UDF/</link>
       <pubDate>Fri, 05 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>localhost:1313</guid>
+      <guid>http://www.dremio.com/blog/querying-for-reading-level-with-a-simple-UDF/</guid>
       <description>&lt;script type=&#34;text/javascript&#34;
  src=&#34;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#34;&gt;
 &lt;/script&gt;
