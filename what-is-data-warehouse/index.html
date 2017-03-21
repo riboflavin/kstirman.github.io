@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+
+
+
+<html>
+    <head>
+            <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Data Engineering - explained by Dremio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="explains what is a data warehouse" />
+    <meta name="keywords" content="data warehouse, ETL, OLAP, OLTP, MPP, Hadoop" />
+
+
+    <meta property="og:title" content="What is a data warehouse? | Dremio"/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content="http://www.dremio.com"/>
+    <meta property="og:site_name" content="dremio"/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content="dremio | what is a data warehouse" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="http://www.dremio.com" />
+    <meta name="twitter:card" content="" />
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+
+
+    <link rel="stylesheet" href="/css/animate.css">
+
+    <link rel="stylesheet" href="/css/icomoon.css">
+
+    <link rel="stylesheet" href="/css/simple-line-icons.css">
+
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="/css/bootstrap.css">
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+
+    <script src="/js/modernizr-2.6.2.min.js"></script>
+
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-92535580-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+    </head>
+    <body>
+
+          <header role="banner" id="fh5co-header" class="navbar-fixed-top fh5co-animated slideInDown">
+        <div class="container">
+
+            <nav class="navbar navbar-default">
+                <div class="navbar-header">
+
+                    <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+                    <a href="/index.html"><img src="/img/dremio-logo-50px.png" class="navbar-logo"/></a>
+                </div>
+        </nav>
+
+    </div>
+</header>
+
+      <br/>
+      <br/>
+      <br/>
+      <div class="container">
+        <div class="overlay"></div>
+        <div class="fh5co-text">
+          <h1>What Is A Data Warehouse?</h1>
+
+          <p>At its simplest, data warehouse is a system used for storing and reporting on data. The data typically originates in multiple systems, then it is moved into the data warehouse for long-term storage and analysis. This storage is structured such that users from many divisions or departments within an organization can access and analyze the data according to their needs.</p>
+
+          <p><br>
+          <br>
+          <p style="text-align: center;">
+          <img style="max-width: 100%;" src="/img/data-warehouse.png">
+          </p>
+          <p style="text-align: center; font-style: italic;">A data warehouse contains data from many operational sources. It is used to analyze data.</p>
+          <br>
+          <br></p>
+
+          <p>Data warehouses are analytical tools, built to support decision making and reporting for users across many departments. They are also archives, holding historical data not maintained in operational systems.</p>
+
+          <p>Data warehouses work to create a single, unified system of truth for an entire organization. Unfortunately, as you might imagine, trying to maintain accuracy and thoroughness in such a system is incredibly difficult.</p>
+
+          <h2 id="why-use-a-data-warehouse">Why Use A Data Warehouse?</h2>
+
+          <p>So, if data warehouses are so complex to build and maintain, why do organizations bother?</p>
+
+          <p>Data warehouses can provide:</p>
+
+          <ul>
+          <li>A single point of access for all data, rather than requiring users to connect to dozens or even hundreds of systems individually</li>
+          <li>An assurance of data quality</li>
+          <li>A history of the data they store</li>
+          <li>Separation between day-to-day operational systems and analytical systems, for security reasons</li>
+          <li>A standard set of semantics around data, for example: consistency in naming conventions, codes for different types of products, languages, and currencies, and so on</li>
+          </ul>
+
+          <p>Storing comprehensive data in structured relationships, means that data warehouses can also provide answers to a whole variety of complex questions, like:</p>
+
+          <ul>
+          <li>How much revenue has each of our product lines brought in per month over the past ten years, broken out by city and state?</li>
+          <li>What is the average transaction size at one of our ATMs, broken out by time of day and total customer assets?</li>
+          <li>What is the percentage employee turnover for the past year in stores that have been open for at least three years? How many hours did those employees work per week?</li>
+          </ul>
+
+          <p><br/></p>
+
+          <h2 id="data-warehouse-architecture">Data Warehouse Architecture</h2>
+
+          <p>Data warehouses are built in many different forms, attempting to account for and structure the complexity of the organizations that use them.</p>
+
+          <p>But the basic architecture is pretty consistent:</p>
+
+          <p>First the raw data is formatted, sometimes called cleansing and normalizing. You can think of this as a pipeline that moves raw data from sources to the warehouse, ensuring the data is appropriately named and formatted and in accurate relationships with the rest of the data that is stored. This is often called the integration layer, and is not necessarily considered part of the data warehouse itself.</p>
+
+          <p>The formatted data is then stored in the data warehouse itself. An access layer allows the tools and applications to retrieve data in a format that suits their needs.</p>
+
+          <p>There is another aspect to data warehouse architecture that governs the whole structure called metadata. Metadata is data about the data. The <a href="http://www.dremio.com/what-is-data-engineering">data engineers</a> and data scientists who maintain a data warehouse collect information about data sources, naming conventions, refresh schedules, etc., and use this information to maintain data quality and to make sure that the data warehouse is serving its intended purposes.</p>
+
+          <h2 id="key-concepts">Key Concepts</h2>
+
+          <h3 id="oltp-vs-olap">OLTP vs. OLAP</h3>
+
+          <p>Generally, data management systems can be considered either OLAP (Online Analytical Processing), or OLTP (Online Transaction Processing). In general, OLTP systems create or capture data in online applications, and OLAP systems analyze data that has been collected from one or more systems. A data warehouse is an example of an OLAP system.</p>
+
+          <table>
+          <thead>
+          <tr>
+          <th></th>
+          <th><strong>OLTP</strong></th>
+          <th><strong>OLAP</strong></th>
+          </tr>
+          </thead>
+
+          <tbody>
+          <tr>
+          <td><strong>Purpose</strong></td>
+          <td>Capture and create data</td>
+          <td>Analyze data</td>
+          </tr>
+
+          <tr>
+          <td><strong>Examples</strong></td>
+          <td>Systems that run your business: CRM, finance, etc.</td>
+          <td>Data warehouses and data marts</td>
+          </tr>
+
+          <tr>
+          <td><strong>Designed To</strong></td>
+          <td>Deal efficiently with large volumes of transactions</td>
+          <td>Allow analysts to efficiently answer questions that require data from multiple source systems</td>
+          </tr>
+
+          <tr>
+          <td><strong>Storage Term</strong></td>
+          <td>Short-term or medium-term; the most recent year or most recent few years of data</td>
+          <td>Long-term, typically many years or the full history of the business</td>
+          </tr>
+          </tbody>
+          </table>
+
+          <p>As such, OLTP and OLAP systems have different technical attributes and requirements.</p>
+
+          <table>
+          <thead>
+          <tr>
+          <th></th>
+          <th><strong>OLTP</strong></th>
+          <th><strong>OLAP</strong></th>
+          </tr>
+          </thead>
+
+          <tbody>
+          <tr>
+          <td><strong>Storage Type</strong></td>
+          <td>Optimized for small reads and writes to maximize throughput and to minimize latency. Extensive use of indexes.</td>
+          <td>Optimized for large reads of many rows of data. May use no indexes or just a few indexes.</td>
+          </tr>
+
+          <tr>
+          <td><strong>Query Type</strong></td>
+          <td>Reads and writes of one or a few rows</td>
+          <td>Mostly reads of many rows</td>
+          </tr>
+
+          <tr>
+          <td><strong>Query Scope</strong></td>
+          <td>Small, discrete pieces of data, such as updating the address for a customer</td>
+          <td>Large numbers of records, eg, what was the average purchase across all sales over the past 5 years</td>
+          </tr>
+
+          <tr>
+          <td><strong>Query Latency</strong></td>
+          <td>10ms - 200ms</td>
+          <td>1 sec - several minutes</td>
+          </tr>
+
+          <tr>
+          <td><strong>Concurrent Queries</strong></td>
+          <td>100-10,000 qps</td>
+          <td>&lt;50</td>
+          </tr>
+
+          <tr>
+          <td><strong>Data Size</strong></td>
+          <td>10GB-1TB</td>
+          <td>1TB-1PB</td>
+          </tr>
+
+          <tr>
+          <td><strong>Physical Storage</strong></td>
+          <td>Row-oriented &ndash; meaning that a system scans all values in a given row, discarding what it doesn’t need. Good for retrieving all information about a specific object, but less efficient at performing operations on a column for all rows in a table.</td>
+          <td>Column-oriented &ndash; meaning that a system scans all values in a given column. Good for performing aggregations across large numbers of records. Less efficient for looking at all attributes for a given object (the whole row).</td>
+          </tr>
+
+          <tr>
+          <td><strong>Vendor Products (relational)</strong></td>
+          <td>Oracle, SQL Server, DB2</td>
+          <td>Teradata, Vertica, Greenplum, Netezza, Sybase IQ</td>
+          </tr>
+
+          <tr>
+          <td><strong>Vendor Products (non-relational)</strong></td>
+          <td>MongoDB, Elasticsearch, Cassandra</td>
+          <td>Hadoop</td>
+          </tr>
+
+          <tr>
+          <td><strong>Vendor Products (cloud)</strong></td>
+          <td>Amazon RDS, Amazon DynamoDB, Azure DocumentDB, MongoDB Atlas</td>
+          <td>Amazon Redshift, Azure SQL Data Warehouse, Google BigQuery</td>
+          </tr>
+          </tbody>
+          </table>
+
+          <p><br/></p>
+
+          <h3 id="extract-transform-load-etl">Extract, Transform, Load (ETL)</h3>
+
+          <p>ETL systems govern the movement of data between the systems of source data and a data warehouse (i.e.: the pipeline mentioned in the section on data warehouse architecture), as well as movement from a data warehouse to data marts. Data must first be extracted from a source, then transformed according to the standards of the next layer of storage, and finally the formatted data must be correctly loaded into this next layer. <a href="http://www.dremio.com/etl-tools-explained/">Learn more about ETL tools</a>.</p>
+
+          <h2 id="related-concepts">Related Concepts</h2>
+
+          <h3 id="data-warehouse-vs-database">Data Warehouse vs. Database</h3>
+
+          <p>Strictly speaking, a database is any structured collection of data. An Excel spreadsheet, Rolodex, or address book would all be very simple examples of databases.  Software such as Excel, Oracle, or MongoDB is a database management system (DBMS) that allows users to access and manage the database. It is common for people to call a DBMS a database. A data warehouse then is a type of database. It is specialized in the data it stores - historic data from many sources - and the purpose it serves - analytics.</p>
+
+          <h3 id="data-warehouse-vs-data-lake">Data Warehouse vs. Data Lake</h3>
+
+          <p>A key attribute of databases, and therefore data warehouses, is that they contain structured data. The way that data is stored &ndash; from what fields are available, to date formats, and everything in between &ndash; is agreed upon in advance and the entire database follows this structure, or schema, rigorously. Their relative consistency and stability, mean that data warehouses can serve queries from many types of roles in the organization. This process is very structured, very predictable, and very efficient, but it’s also hard to do well.</p>
+
+          <p>Consensus is still forming around the precise definition of a data lake. But, generally speaking, data lakes are another means of storing data, but without the rigorous schema of a data warehouse. In contrast to a data warehouse, schema in the data lake is applied by the query. This means it is much easier to load the data into a data lake, but queries are much more complex to construct, which limits the use of the data lake to sophisticated roles like data engineers and data scientists. Data lakes usually take much longer to return results when compared to data warehouses. Most data lakes are built on Hadoop.</p>
+
+          <h3 id="data-warehouse-vs-data-mart">Data Warehouse vs. Data Mart</h3>
+
+          <p>If a data warehouse holds and integrates data from across an organization, a data mart is a smaller subset of the data, specialized for the use of a given department or division. Often data marts are built and controlled by a single department, using the central data warehouse along with internal operating systems and external data. Data marts typically hold just one subject area, for example marketing or sales. Because they are smaller and more specific, they are often easier to manage and maintain, as well as having more flexible structures.</p>
+
+          <h3 id="olap-cubes">OLAP Cubes</h3>
+
+          <p>OLAP systems often contain tremendous quantities of data, which can make running specific queries on them slow. To speed up and simplify querying, OLAP systems can be broken down further into sub-databases called cubes, which contain a limited set of dimensions and therefore provide faster querying time.</p>
+
+          <h3 id="business-intelligence-tools">Business Intelligence Tools</h3>
+
+          <p>Business intelligence software is a critical layer on top of a data warehouse that allows the information within it to be used to make business decisions. Business intelligence software has many different types of functionality, but it usually includes some sort of engine for building and executing queries, as well as a way to store and visualize results for incorporation into documents containing business analysis.</p>
+
+          <h2 id="data-warehouse-technologies">Data Warehouse Technologies</h2>
+
+          <p>When considering which tools to use, it’s important to be sure that they meet your requirements in terms of scalability (can it grow with your needs), access (which users and how many need access to your warehouse and from what locations), and integrations (does this system integrate with your data sources and BI tools).</p>
+
+          <h3 id="relational-databases">Relational Databases</h3>
+
+          <p>Relational databases are the systems that store the majority of business data. They have been around for several decades and are very mature. Relational databases exist for OLTP and OLAP use cases. They are very well understood and provide extensive ecosystems of complementary technologies for management and data access. Popular relational databases include:</p>
+
+          <ul>
+          <li><strong>IBM DB2</strong>. IBM bundles their core relational database, DB2, with their application server, data mining technologies, Cognos for cubes and BI, and other technologies. They call this DB2 Warehouse. DB2 is most popular with IBM shops who use IBM’s hardware, software, and services.</li>
+          <li><strong>Microsoft SQL Server</strong>.  Microsoft has built out the features of its core relational database over many releases to support large data warehousing deployments. They have also built out integrations to their cloud offerings and Hadoop to provide a more comprehensive offering for structured and unstructured data. Microsoft also has the best management tooling and integrations with other Microsoft products, including Windows. SQL Server is most popular with Microsoft shops and tends to be more cost competitive.</li>
+          <li><strong>Oracle Exadata</strong>. Like IBM, Oracle is also a hardware vendor. Exadata is an appliance that is built on the core Oracle database, with hardware and software that has been optimized for large scale, high performance systems. Oracle is the most popular database in the market. Exadata is very expensive.</li>
+          </ul>
+
+          <p><br/></p>
+
+          <h3 id="mpp-massively-parallel-processing-analytical-databases">MPP (Massively Parallel Processing) Analytical Databases</h3>
+
+          <p>MPP databases are a data warehouse technology that focuses on hardware and software to support parallel processing. That is, query processing is broken up into many smaller parallel tasks that are executed together across multiple servers. This approach speeds up query and ingestion times dramatically. However, MPP databases can be expensive, as the most popular vendors have closed-source products.</p>
+
+          <p>Popular MPP databases include:</p>
+
+          <ul>
+          <li><strong>Teradata</strong>. Teradata is the gold standard. It is the most widely used and most mature. Unlike the relational vendors listed above, Teradata has always focused on the data warehouse exclusively. It is available as an appliance only and is very expensive.</li>
+          <li><strong>IBM Netezza</strong>. Netezza is another data warehouse appliance offering that grew quickly as a result of aggressive pricing and ease of use. The software is based in part on the open source relational database PostgreSQL. One of the key Netezza innovations was the use of field programmable gate arrays (FPGA) to speed up query processing. Netezza was acquired by IBM in 2010.</li>
+          <li><strong>HP Vertica</strong>. Vertica was an innovative column-oriented MPP database that came from research at MIT. Unlike competing products at the time, Vertica was available as software that supported multiple hardware platforms and provided compelling performance as a result of a novel SQL execution engine and strong compression capabilities. Vertica was acquired by HP in 2011.</li>
+          <li><strong>Pivotal Greenplum</strong>. Greenplum is an MPP database based on PostgreSQL. Because it is based on PostgreSQL, it has a broader ecosystem of complementary tools. And because it is row-oriented it makes a different set of tradeoffs compared to column-oriented products. It was acquired by EMC in 2010, then open sourced by Pivotal in 2015.</li>
+          <li><strong>SAP Sybase IQ</strong>. Sybase IQ was one of the first column-oriented databases and entered the market in the late 1990s. It has a long track record, especially in Sybase-centric markets like Financial Services. IQ was well known for strong performance, but was viewed as being expensive and difficult to manage and scale. Sybase was acquired by SAP in 2010.</li>
+          </ul>
+
+          <h3 id="hadoop">Hadoop</h3>
+
+          <p>Similar to the MPP approach, Hadoop is also able to distribute computational tasks across a cluster of computers. However, Hadoop is open source, and as such is easier and cheaper for enterprises to adopt. Most data lakes use Hadoop because of its ability to cheaply and quickly handle large volumes of structured and unstructured data, and because it is well-suited to storing data in its native formats so that analysts can apply whichever transformations they need. Hadoop is not technically a database, but it is overlaps in a number of functional areas.</p>
+
+          <h2 id="alternatives-to-data-warehouses">Alternatives to Data Warehouses</h2>
+
+          <p>Data warehouses are powerful and useful, but require large amounts of work both upfront and on an ongoing basis to use and maintain. Because data warehouses have to be centralized and standardized in order to serve many users across an organization, they always include assumptions about what should be stored, and how, that cannot be optimal for all users.</p>
+
+          <p>There is a better way. <a href="http://www.dremio.com">Dremio is an alternative to data warehouses</a>.</p>
+
+        	<footer id="footer" role="contentinfo">
+		<a href="#" class="gotop js-gotop"><i class="icon-arrow-up2"></i></a>
+		<div class="container">
+			<div class="">
+				<div class="col-md-12 text-center">
+					<p>Copyright &copy; Dremio Corporation. All Rights Reserved. Site theme from FreeHTML5.co</p>
+
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<ul class="social social-circle">
+						<li><a href="https://twitter.com/dremiohq"><i class="icon-twitter"></i></a></li>
+						<li><a href="https://www.facebook.com/pages/Dremio/1449887358675068"><i class="icon-facebook"></i></a></li>
+						<li><a href="https://www.linkedin.com/company/dremio"><i class="icon-linkedin"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5848806689cd5d32"></script>
+    </body>
+</html>
