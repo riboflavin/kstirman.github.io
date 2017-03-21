@@ -215,7 +215,7 @@
 
 <tr>
 <td><strong>Relational databases</strong> (analytical)</td>
-<td>Data warehouses, data marts</td>
+<td><a href="http://www,dremio.com/what-is-data-warehouse">Data warehouses</a>, data marts</td>
 <td>Tables</td>
 <td>SQL</td>
 <td>Teradata, Vertica, Amazon Redshift, Sybase IQ</td>
@@ -282,7 +282,7 @@
 <p>Data engineering thinks about the end-to-end process as “data pipelines.” Each pipeline has one one or more sources, and one or more destinations. Within the pipeline, data may undergo sever steps of transformation, validation, enrichment, summarization, or other steps. They creates these pipelines with a variety of technologies such as:</p>
 
 <ul>
-<li><strong>ETL Tools.</strong> Extract Transform Load (ETL) is a category of technologies that move data between systems. These tools access data from many different technologies. They then apply rules to “transform” and cleanse the data so that it is ready for analysis. For example, an ETL process might extract the postal code from an address field and store this value in a new field so that analysis can easily be performed at the postal code level. Finally, they load the data into a destination system for analysis. Examples of ETL products include Informatica and SAP Data Services.<br /></li>
+<li><strong>ETL Tools.</strong> Extract Transform Load (ETL) is a category of technologies that move data between systems. These tools access data from many different technologies. They then apply rules to “transform” and cleanse the data so that it is ready for analysis. For example, an ETL process might extract the postal code from an address field and store this value in a new field so that analysis can easily be performed at the postal code level. Finally, they load the data into a destination system for analysis. Examples of ETL products include Informatica and SAP Data Services. <a href="http://www.dremio.com/etl-tools-explained">Learn more about ETL Tools</a>.<br /></li>
 <li><strong>SQL.</strong> Structured Query Language (SQL) is the standard language for querying relational databases. They use SQL to perform ETL tasks within a relational database. SQL is especially useful when the data source and destination are the same type of database. SQL is very popular and well understood by many people and supported by many tools.</li>
 <li><strong>Python.</strong> Python is a general purpose programming language. It has become a popular tool for performing ETL tasks due to its ease of use and extensive libraries for accessing databases and storage technologies. Python can be used instead of ETL tools for ETL tasks. Many data engineers use Python instead of an ETL tool because it is more flexible and more powerful for these tasks.</li>
 <li><strong>Spark &amp; Hadoop.</strong> Spark and Hadoop work with large data sets on clusters of computers. They make it easier to apply the power of many computers working together to perform a job on the data. This capability is especially important when the data is too large to be stored on a single computer. Today Spark and Hadoop are not as easy to use as Python, and there are far more people who know and use Python.</li>
