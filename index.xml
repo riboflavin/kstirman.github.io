@@ -19,9 +19,9 @@
 
 &lt;h2 id=&#34;what-is-a-data-warehouse&#34;&gt;What is a Data Warehouse?&lt;/h2&gt;
 
-&lt;p&gt;For over 30 years, we&amp;rsquo;ve approached data analytics the same way - build another data warehouse. Today there are new options with better tradeoffs.&lt;/p&gt;
+&lt;p&gt;For over 30 years, we&amp;rsquo;ve approached data analytics the same way - copy the data, move it to a different system, spend a fortune, wait an eternity. This is building the data warehouse. We&amp;rsquo;re hard at work on a new alternative.&lt;/p&gt;
 
-&lt;p&gt;We&amp;rsquo;ve published a new page - &lt;a href=&#34;http://www.dremio.com/what-is-data-warehouse&#34;&gt;What Is A Data Warehouse?&lt;/a&gt; - as a survey of the market today. This is our best attempt at being unbiased. We hope you find it useful!&lt;/p&gt;
+&lt;p&gt;We&amp;rsquo;ve published a new page - &lt;a href=&#34;http://www.dremio.com/what-is-data-warehouse&#34;&gt;What Is A Data Warehouse?&lt;/a&gt; - to explain the basics of data warehousing and to summarize the leading technologies. This is our best attempt at being unbiased. We hope you find it useful!&lt;/p&gt;
 </description>
     </item>
     
