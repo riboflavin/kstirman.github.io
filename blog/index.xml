@@ -6,8 +6,24 @@
     <description>Recent content in Blogs on dremio | reimagining data analytics for the modern world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Mar 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 14 Apr 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://www.dremio.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>What Are Data Pipelines?</title>
+      <link>http://www.dremio.com/blog/what-are-data-pipelines/</link>
+      <pubDate>Fri, 14 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.dremio.com/blog/what-are-data-pipelines/</guid>
+      <description>
+
+&lt;h2 id=&#34;what-are-data-pipelines&#34;&gt;What are Data Pipelines?&lt;/h2&gt;
+
+&lt;p&gt;Data moves between systems. Data engineers create data pipelines to orchestrate the movement, transformation, validation, and loading of data, from source to final destination.&lt;/p&gt;
+
+&lt;p&gt;We&amp;rsquo;ve published a new page - &lt;a href=&#34;http://www.dremio.com/what-are-data-pipelines&#34;&gt;What Are Data Pipelines?&lt;/a&gt; - to help explain this critical concept and related technologies.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>What Is A Data Warehouse?</title>
@@ -38,22 +54,6 @@
 &lt;p&gt;The ETL model has been in use for over 30 years - read data from different sources, apply transformations, then save the results in a different system for analytics. Modern hardware and distributed processing create new models for accessing data for analytics.&lt;/p&gt;
 
 &lt;p&gt;We put together a &lt;a href=&#34;http://www.dremio.com/etl-tools-explained&#34;&gt;survey of current ETL tools in the market&lt;/a&gt; to help users understand their options in terms of commercial products, open source projects, and cloud services. We hope you find it useful!&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>What Are Data Pipelines?</title>
-      <link>http://www.dremio.com/blog/what-are-data-pipelines/</link>
-      <pubDate>Wed, 08 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.dremio.com/blog/what-are-data-pipelines/</guid>
-      <description>
-
-&lt;h2 id=&#34;what-are-data-pipelines&#34;&gt;What are Data Pipelines?&lt;/h2&gt;
-
-&lt;p&gt;Data moves between systems. Data engineers create data pipelines to orchestrate the movement, transformation, validation, and loading of data, from source to final destination.&lt;/p&gt;
-
-&lt;p&gt;We&amp;rsquo;ve published a new page - &lt;a href=&#34;http://www.dremio.com/what-are-data-pipelines&#34;&gt;What Are Data Pipelines?&lt;/a&gt; - to help explain this critical concept and related technologies.&lt;/p&gt;
 </description>
     </item>
     
