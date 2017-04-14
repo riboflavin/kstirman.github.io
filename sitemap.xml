@@ -12,6 +12,11 @@
   </url>
   
   <url>
+    <loc>http://www.dremio.com/blog/what-are-data-pipelines/</loc>
+    <lastmod>2017-03-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.dremio.com/blog/what-is-data-engineering/</loc>
     <lastmod>2017-03-08T00:00:00+00:00</lastmod>
   </url>
@@ -206,6 +211,10 @@
   
   <url>
     <loc>http://www.dremio.com/nda/</loc>
+  </url>
+  
+  <url>
+    <loc>http://www.dremio.com/what-are-data-pipelines/</loc>
   </url>
   
   <url>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+
+
+
+<html>
+    <head>
+            <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> What Are Data Pipelines?</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Data Pipelines - explained by Dremio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dremio is a fundamentally new approach to data pipelines. Open source. Download now." />
+
+    <meta property="og:title" content="What are data pipelines? | Dremio"/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content="http://www.dremio.com"/>
+    <meta property="og:site_name" content="dremio"/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content="dremio | what are data pipelines" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="http://www.dremio.com" />
+    <meta name="twitter:card" content="" />
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+
+
+    <link rel="stylesheet" href="/css/animate.css">
+
+    <link rel="stylesheet" href="/css/icomoon.css">
+
+    <link rel="stylesheet" href="/css/simple-line-icons.css">
+
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="/css/bootstrap.css">
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+
+    <script src="/js/modernizr-2.6.2.min.js"></script>
+
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-92535580-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+    </head>
+    <body>
+
+          <header role="banner" id="fh5co-header" class="navbar-fixed-top fh5co-animated slideInDown">
+        <div class="container">
+
+            <nav class="navbar navbar-default">
+                <div class="navbar-header">
+
+                    <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+                    <a href="/index.html"><img src="/img/dremio-logo-50px.png" class="navbar-logo"/></a>
+                </div>
+        </nav>
+
+    </div>
+</header>
+
+      <br/>
+      <br/>
+      <br/>
+      <div class="container">
+        <div class="overlay"></div>
+        <div class="fh5co-text">
+          <h1>What Are Data Pipelines?</h1>
+
+
+<p>Businesses work with massive amounts of data. They also need to analyze that data, but it usually doesn’t make sense to run analysis in the systems where the data is generated. There are a few reasons for this:</p>
+
+<ul>
+<li>Analytics is computationally taxing. If you use the same systems for analysis that you use for capturing your data, you risk impairing both the performance of your service (at the capture end), as well as slowing down your analysis.</li>
+<li>Data from multiple systems or services sometimes needs to be combined in ways that make sense for analysis. For example, you might have one system that captures events, and another that stores user data or files. Having a separate system to govern your analytics means you can combine these data types without impacting or degrading performance.</li>
+<li>You may not want analysts to have access to production systems, or conversely, you may not want production engineers to have access to all analytics data.</li>
+<li>If you need to change the way you store your data, or what you store, it’s a lot less risky to make those changes on a separate system while letting the systems that back your services continue on as before.</li>
+</ul>
+
+<p>These two systems (data generating v. data analyzing) are often called OLTP (Online Transaction Processing) and OLAP (Online Analytical Processing). Here’s a quick overview of the functions of each:</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>OLTP</strong></th>
+<th><strong>OLAP</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><strong>Purpose</strong></td>
+<td>Capture and create data</td>
+<td>Analyze data</td>
+</tr>
+
+<tr>
+<td><strong>Examples</strong></td>
+<td>Systems that run your business: CRM, finance, etc.</td>
+<td>Data warehouses and data marts</td>
+</tr>
+
+<tr>
+<td><strong>Designed To</strong></td>
+<td>Deal efficiently with large volumes of transactions</td>
+<td>Allow analysts to efficiently answer questions that require data from multiple source systems</td>
+</tr>
+
+<tr>
+<td><strong>Storage Term</strong></td>
+<td>Short-term or medium-term; the most recent year or most recent few years of data</td>
+<td>Long-term, typically many years or the full history of the business</td>
+</tr>
+</tbody>
+</table>
+
+<p><br/>
+So, very generally speaking, you’ll have two (at least!) systems for data management, but in order for these systems to work, you need a means of moving data between them. This is where data pipelines come in.</p>
+
+<h2 id="data-pipelines">Data Pipelines</h2>
+
+<p>Moving data between systems can require many steps: from copying data, to moving it from an on-premise location into the cloud, to reformatting it or joining it with other data sources. Each of these steps needs to be done, and usually requires separate software.</p>
+
+<p>A data pipeline is the sum of all these steps, and its job is to ensure that these steps all happen reliably to all data. These processes should be automated, but most organizations will need at least one or two engineers to maintain the systems, repair failures, and update according to the changing needs of the business.</p>
+
+<p>The many automated transformations required for effective and thorough data pipelines mean that, even with careful planning, the pipes will sooner or later begin to leak. Problems that can occur include:</p>
+
+<ul>
+<li>Changes that occur in the schema (or formatting) of your transactional data will necessitate changes to the script that makes it available to your analytical systems. These updates are difficult to automate and require meticulous attention. Failing to update schema, or missing just one or two details in your script, can cause your pipeline to fail or, possibly worse, create data that is incorrect.</li>
+<li>This issue also happens in reverse: if your analysts find that they need the data differently structured, you’ll have to remake the format from that direction, with the same meticulous care.</li>
+<li>Even if you set up these scripts beautifully, they will experience small failures from time to time. You’ll need a way to be alerted to problems, a way to locate and repair them quickly, and a means of recovering or reprocessing any data lost in the shuffle.</li>
+</ul>
+
+<p>A good data pipeline functions like the plumbing it is named after: quietly, reliably, and in the background. But, like plumbing, you’ll want on-site or on-call professionals who can perform repairs in the event of a leak.</p>
+
+<h2 id="moving-a-dataset">Moving a Dataset</h2>
+
+<p>Data pipelines can be built in many shapes and sizes, but let’s look at a common example to get a better sense of the generic steps in the process.</p>
+
+<p>Take an ecommerce system that needs to move operations data about purchases to a data warehouse. Say you’ve been selling pet rocks and accessories for some time, and you need to get a clear look at who is buying Iggy the Pumice. If you build a data pipeline to move all transactions including an Iggy to a data warehouse, you’ll be able to check in on past and current Iggies and plan for future inventory. You set out, undaunted, to build your pipeline:</p>
+
+<ol>
+<li><p>In the beginning, an order is placed, creating an order record which might include customer_id, product_ids, total paid, timestamp, and anything else that the system was built to record. Each of these items are collected into a record of the customer’s action. This is the source of your data.</p></li>
+
+<li><p>Next, this data needs to be combined with data from other systems. For example, you might need to immediately combine with a customer database to verify VIP membership for free shipping. You might also want a demographics system to pick up info about shipping zip (population, median income, distance from major city, etc), or a segmentation system to associate this customer with one or more customer segments. Likely your source data will need to be combined with all of these systems and possibly more. This is called joining data.</p></li>
+
+<li><p>Additional processing may be necessary. For example, some of the fields in your source data might contain discrete elements, like a zip code in an address field that needs to be accessible on its own. Further, some of the data logged by your transactional systems will be inappropriate to include in analytical systems. Specific customer information like full addresses and payment details may need to be masked.</p></li>
+
+<li><p>Now these different types of data need to be standardized. You might want to map customer age into age ranges. Color names might need to be standardized, or you might need to be sure you’re consistent about how different time zones are logged.</p></li>
+
+<li><p>Dirty records must be filtered out. Sometimes your source data is off. Even the most carefully built OLTP systems can log errors or blanks that will throw off any other systems in your pipeline. You’ll need to correct for things like missing fields or data that is clearly wrong (an incorrect zip code, a customer that has marked their date of birth as 1876, etc). You need to be sure your data is correct.</p></li>
+
+<li><p>Finally, data can be loaded into the destination. You’ll want to reconcile your records to be sure that all data logged by the source is accounted for. Even if some logs cannot be loaded (for example, due to errors that needed a separate review), you’ll need to have some record of their absence or risk corrupting your dataset. So, you’ll need a system in place to notify other processes of the pipeline’s completion and its final outcome (total number of records moved, rejected, flagged for review, etc).</p></li>
+
+<li><p>Most of these processes should be automated. You can decide whether to run this process on a schedule or if it should happen continuously.</p></li>
+</ol>
+
+<p>We call each of these end-to-end processes a data pipeline. So, the basic parts and processes of most data pipelines are:</p>
+
+<ul>
+<li><strong>Sources</strong>. Data will be accessed from different sources: RDBMS, Application APIs, Hadoop, NoSQL, cloud sources, and so on. As data is accessed, security controls must be observed, and best practices must be followed for optimal performance and reliability. Data schema and data statistics are gathered about the source to facilitate pipeline design. In this example the source of our data is the operational system that a customer interacts with.</li>
+<li><strong>Joins</strong>. It is common for data to be combined from different sources as part of a data pipeline. Joins specify the logic and criteria for how the data is combined.</li>
+<li><strong>Extraction</strong>. Some discrete data elements may be embedded in larger fields, such as a zip code in an address field. In some cases multiple values are grouped together, like categories for a business. Or, discrete values may need to be extracted, or certain elements of a given field may need to be masked.</li>
+<li><strong>Standardization</strong>. On a field by field basis, data may need to be standardized in terms of units of measure, dates, attributes such as color or size, and codes related to industry standards.</li>
+<li><strong>Correction</strong>. It is common for data to include errors. These could be invalid fields such as a state abbreviation or zip code that does not exist, or abbreviations that need to be expanded. There may also be corrupt records that need to be removed or reviewed in a separate process.</li>
+<li><strong>Loads</strong>. Once the data is ready, it need to be loaded into a system for analysis. The destination is typically an RDBMS, a data warehouse, or Hadoop. Each destination has specific best practices that are important to follow for performance and reliability.</li>
+<li><strong>Automation</strong>. Data pipelines are normally performed many times, and typically on a schedule or continuously. Errors must be detected, and the status needs to be reported to monitoring processes.</li>
+</ul>
+
+<p>In terms of technology, the stages of your data pipeline might use one or more of the following:</p>
+
+<ul>
+<li><strong>Event frameworks</strong> help you capture events from your applications more easily, creating an event log that can then be processed for use.</li>
+<li><strong>Message bus</strong> is hardware or software that ensures that data sent between clusters of machines is properly queued and received. A message bus allows systems to immediately send (or receive) data to (or from) other systems without needing to wait for acknowledgment, and without needing to worry about errors or system inaccessibility. Properly implemented, a message bus also makes it easier for different systems to communicate using their own protocols.</li>
+<li><strong>Data persistence</strong> stores your data in files or other non-volatile storage so that it can be processed in batches, rather than all at once, simultaneously.</li>
+<li><strong>Workflow management</strong> structures the tasks (or processes) in your data pipeline, and makes it easier to supervise and manage them.</li>
+<li><strong>Serialization frameworks</strong> convert data into more compact formats for storage and transmission.</li>
+</ul>
+
+<p>Many companies have hundreds or thousands of data pipelines. Companies build each pipeline with one or more technologies, and each pipeline might be approached differently. Datasets often begin with an organization’s audience or customer, but they will also originate with given departments or divisions within the organization itself. It can be useful to think of your data as events. So, events are logged and then translated across a pipeline, transformed according to the needs of your users and the systems they maintain.</p>
+
+<p>Moving data from place to place means that different end users can query more thoroughly and accurately, rather than having to go to a myriad of different sources. Good data pipeline architecture will account for all sources of events as well as providing support for the formats and systems each event or data set should be loaded into.</p>
+
+<h2 id="data-pipeline-technologies">Data Pipeline Technologies</h2>
+
+<p>The best tool depends on the step of the pipeline, the data, and the associated technologies. For example, streaming data might require a different tool than a relational database. Working in a data center might involve different tools than working in the cloud.</p>
+
+<p>Some examples of products used in building data pipelines:</p>
+
+<ul>
+<li><a href="http://www.dremio.com/what-is-data-warehouse/">Data warehouses</a></li>
+<li><a href="http://www.dremio.com/etl-tools-explained/">ETL tools</a></li>
+<li>Data Prep tools</li>
+<li>Luigi: a workflow scheduler that can be used to manage jobs and processes in Hadoop and similar systems.</li>
+<li>Python / Java / Ruby: programming languages used to write processes in many of these systems.</li>
+<li>AWS Data Pipelines: another workflow management service that schedules and executes data movement and processes</li>
+<li>Kafka: a real time streaming platform that allows you to move data between systems and applications, can also transform or react to these data streams.</li>
+</ul>
+
+<p><a href="http://www.dremio.com/what-is-data-engineering/">Data engineers</a> are responsible for using these tools and others like them to build and maintain data pipelines. Even if you don’t have people with this title, this is the role they are fulfilling. As we noted above, you need someone to fix pipelines if and when they fail, and it’s always nice to have a real live plumber, rather than someone frantically pinch-hitting in the midst of a flood.</p>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p>A carefully managed data pipeline can provide organizations access to reliable and well-structured datasets for analytics. Automating the movement and transformation of data allows the consolidation of data from multiple sources so that it can be used strategically. The traditional approach to building pipelines is complex, fragile, and difficult to maintain. Dremio is a new approach to data analytics that is an alternative to traditional approaches to data pipelines.  <a href="http://www.dremio.com">Learn more about Dremio</a>.</p>
+
+
+
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5848806689cd5d32"></script>
+    </body>
+</html>

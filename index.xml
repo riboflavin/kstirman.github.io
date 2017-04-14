@@ -42,6 +42,22 @@
     </item>
     
     <item>
+      <title>What Are Data Pipelines?</title>
+      <link>http://www.dremio.com/blog/what-are-data-pipelines/</link>
+      <pubDate>Wed, 08 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.dremio.com/blog/what-are-data-pipelines/</guid>
+      <description>
+
+&lt;h2 id=&#34;what-are-data-pipelines&#34;&gt;What are Data Pipelines?&lt;/h2&gt;
+
+&lt;p&gt;Data moves between systems. Data engineers create data pipelines to orchestrate the movement, transformation, validation, and loading of data, from source to final destination.&lt;/p&gt;
+
+&lt;p&gt;We&amp;rsquo;ve published a new page - &lt;a href=&#34;http://www.dremio.com/what-are-data-pipelines&#34;&gt;What Are Data Pipelines?&lt;/a&gt; - to help explain this critical concept and related technologies.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>What Is Data Engineering?</title>
       <link>http://www.dremio.com/blog/what-is-data-engineering/</link>
       <pubDate>Wed, 08 Mar 2017 00:00:00 +0000</pubDate>
@@ -1426,149 +1442,6 @@ $ cp target/*.jar ~/apache-drill/jars/3rdparty
 &lt;p&gt;And that&amp;rsquo;s literally all there is to it! You should now be able to invoke the &lt;code&gt;SIMPLESENT()&lt;/code&gt; function from within
 Drill&amp;rsquo;s SQL prompt. In the next article I&amp;rsquo;ll be doing exactly that as I explore a corpus of Reddit submission titles
 using this handy new analysis tool.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Securing SQL on Hadoop, Part 2: Installing and configuring Drill</title>
-      <link>http://www.dremio.com/blog/securing-SQL-on-Hadoop-part-2-installing-and-configuring-Drill/</link>
-      <pubDate>Mon, 25 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.dremio.com/blog/securing-SQL-on-Hadoop-part-2-installing-and-configuring-Drill/</guid>
-      <description>
-
-&lt;p&gt;Today we&amp;rsquo;re going to pick up where we left off in &lt;a href=&#34;http://www.dremio.com/blog/securing-sql-on-hadoop-part-1-installing-cdh-and-kerberos/&#34;&gt;Part
-1&lt;/a&gt; of my two-parter about setting
-up a CDH cluster to perform secure SQL queries on an HDFS store. As you recall, last time we had just finished using
-Cloudera Manager&amp;rsquo;s wizard to finalize a Kerberos configuration, and all of the cluster services had come back online
-using the new security system so our basic HDFS cluster set-up was good to go. All that&amp;rsquo;s left to do now is install and
-configure the piece of software that implements the SQL interface: Apache Drill.&lt;/p&gt;
-
-&lt;h2 id=&#34;step-1-drill-prerequisites&#34;&gt;Step 1.) Drill prerequisites&lt;/h2&gt;
-
-&lt;p&gt;First things first: We&amp;rsquo;re gonna need Java 7 or better on our CDH machines. Following some useful information found
-&lt;a href=&#34;http://lifeonubuntu.com/ubuntu-missing-add-apt-repository-command/&#34;&gt;here&lt;/a&gt; and
-&lt;a href=&#34;http://askubuntu.com/questions/508546/howto-upgrade-java-on-ubuntu-14-04-lts&#34;&gt;here&lt;/a&gt;, we can set up a new package
-repository and pull it down using:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ sudo apt-get install software-properties-common python-software-properties
-$ sudo add-apt-repository ppa:webupd8team/java
-$ sudo apt-get update
-$ sudo apt-get install oracle-java7-installer
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;(Remember to do this for each node on your cluster!)&lt;/p&gt;
-
-&lt;h2 id=&#34;step-2-install-drill&#34;&gt;Step 2.) Install Drill&lt;/h2&gt;
-
-&lt;p&gt;Time to install Drill and tell it where the cluster&amp;rsquo;s &amp;lsquo;Zookeeper&amp;rsquo; is (REMEMBER: Just like installing Java, this step
-needs to be done on every node). Start by downloading and unpacking the software:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ wget http://apache.osuosl.org/drill/drill-1.4.0/apache-drill-1.4.0.tar.gz
-$ tar xzvf apache-drill-1.4.0.tar.gz
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Next edit Drill&amp;rsquo;s &lt;code&gt;conf/drill-override.conf&lt;/code&gt; file so that it looks like:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;drill.exec: {
-  cluster-id: &amp;quot;drill-cdh-cluster&amp;quot;,
-  zk.connect: &amp;quot;&amp;lt;ZOOKEEPER IP&amp;gt;:2181&amp;quot;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Where &amp;lsquo;ZOOKEEPER IP&amp;rsquo; should be changed to the IP of the CDH machine that runs the zookeeper process (this is probably
-the same as the Main Node from the last article).&lt;/p&gt;
-
-&lt;p&gt;If you&amp;rsquo;d like, you can add Drill to the system path by adding this to &lt;code&gt;.bashrc&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;export PATH=$PATH:/apache-drill-1.4.0/bin
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;step-3-configuring-drill-for-hdfs&#34;&gt;Step 3.) Configuring Drill for HDFS&lt;/h2&gt;
-
-&lt;p&gt;Now we need to set up Drill so that it can read our cluster&amp;rsquo;s HDFS. Open the Drill Web Console by going to
-http://&amp;lt;MAIN NODE IP&amp;gt;:8047. Click &amp;lsquo;Storage&amp;rsquo; at the top and then &amp;lsquo;Update&amp;rsquo; next to the dfs plugin and copy the JSON
-that you find in the text field. Next make a new storage plugin called &amp;lsquo;hdfs&amp;rsquo; (previous page) and then paste in the text
-you just copied, replacing the &amp;lsquo;null&amp;rsquo; that&amp;rsquo;s already there.&lt;/p&gt;
-
-&lt;p&gt;We&amp;rsquo;ll proceed by making a small modification that turns this standard &amp;lsquo;dfs&amp;rsquo; plugin in into our new one for HDFS.&lt;/p&gt;
-
-&lt;p&gt;Take the line&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;quot;connection&amp;quot;: &amp;quot;file:///&amp;quot;,
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;and replace it with&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;quot;connection&amp;quot;: &amp;quot;hdfs://&amp;lt;ADDRESS OF HDFS NAMENODE&amp;gt;:8020&amp;quot;,
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hit &amp;ldquo;Create&amp;rdquo; and now Drill is ready to read your HDFS data!&lt;/p&gt;
-
-&lt;h2 id=&#34;step-4-enabling-kerberos-support-for-drill&#34;&gt;Step 4.) Enabling Kerberos support for Drill&lt;/h2&gt;
-
-&lt;p&gt;So now we have HDFS, Kerberos, &lt;em&gt;and&lt;/em&gt; Drill, but currently Drill can&amp;rsquo;t talk to the HDFS we have running because it
-requires authentication. Let&amp;rsquo;s fix that.&lt;/p&gt;
-
-&lt;p&gt;First we should make an HDFS superuser account as indicated in this &lt;a href=&#34;http://www.cloudera.com/documentation/enterprise/latest/topics/cm_sg_s5_hdfs_principal.html&#34;&gt;Cloudera
-doc&lt;/a&gt;. On the Main Node, run
-&lt;code&gt;sudo kadmin.local&lt;/code&gt; and add an &amp;lsquo;hdfs&amp;rsquo; principal with this command:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;addprinc hdfs@KERBEROS.CDH
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;(Hit Ctrl-d to exit the prompt). In order to enable authentication with Kerberos, we also need to copy the file
-&lt;code&gt;hadoop-yarn-api.jar&lt;/code&gt; into Drill&amp;rsquo;s class path:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ cp /opt/cloudera/parcels/CDH-5.5.1-1.cdh5.5.1.p0.11/lib/hadoop/client/hadoop-yarn-api.jar ~/apache-drill/jars/
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;(NOTE: &lt;em&gt;The above step and the three following must be performed on each node of the cluster&lt;/em&gt;.)&lt;/p&gt;
-
-&lt;p&gt;Next, Drill&amp;rsquo;s &lt;code&gt;conf/core-site.xml&lt;/code&gt; file should be edited to contain the following snippet of xml:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;property&amp;gt;
-  &amp;lt;name&amp;gt;hadoop.security.authentication&amp;lt;/name&amp;gt;
-  &amp;lt;value&amp;gt;kerberos&amp;lt;/value&amp;gt;
-&amp;lt;/property&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;All that&amp;rsquo;s left to do is create an &amp;lsquo;hdfs&amp;rsquo; Kerberos ticket for the user that we&amp;rsquo;re logged into&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ kinit hdfs@KERBEROS.CDH
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;and then start up each of the drillbits&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;drillbit.sh start
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;So now Drill has both the configuration and the authority to use our kerberized HDFS store. Give it a shot by opening up
-a Drill prompt (&lt;code&gt;drill-conf&lt;/code&gt;) and trying a query.&lt;/p&gt;
-
-&lt;p&gt;For example, here&amp;rsquo;s a test query on my handy 250 GB of Reddit data:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;gt; SELECT title, TO_TIMESTAMP(CAST(created_utc AS INT)) created, score FROM hdfs.`/data/RS_full_corpus.json` WHERE over_18 = false AND score &amp;gt;= 100 LIMIT 10;
-+------------------------------------------------------------------------------+------------------------+--------+
-|                                    title                                     |        created         | score  |
-+------------------------------------------------------------------------------+------------------------+--------+
-| Early Retirement Guide - Phillip Greenspun                                   | 2006-01-30 19:21:17.0  | 223    |
-| Programming Like A Mathematician I: Closures                                 | 2006-01-29 18:14:30.0  | 178    |
-| More than 1000 wikipedia alterations by US Representative Staffers           | 2006-01-29 12:57:45.0  | 304    |
-| Great Design: What is Design?                                                | 2006-01-26 20:54:30.0  | 143    |
-| Use Python (not Java) to teach programming                                   | 2006-01-26 19:43:23.0  | 167    |
-| The Demotivators!                                                            | 2006-01-26 18:02:51.0  | 168    |
-| Just how much can you achieve with pure CSS? Some amazing demonstrations.    | 2006-02-26 18:07:57.0  | 329    |
-| A summary of two lectures by Alan Kay                                        | 2006-02-24 04:56:49.0  | 110    |
-| How Intel could buy Hollywood and profit by selling more DRM-less machines.  | 2006-02-20 20:48:18.0  | 108    |
-| &amp;quot;zeitgeist&amp;quot; reddits, covering popular topics, eg, the infamous cartoons      | 2006-02-19 19:33:59.0  | 299    |
-+------------------------------------------------------------------------------+------------------------+--------+
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;And that wraps up Part 2 of this how-to guide. May all your queries be fruitful and secure!&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Acknoweldgements: Many thanks to William Witt over on the user@drill.apache.org mailing list for providing crucial
-information about Kerberos-Drill configuration!&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
     
