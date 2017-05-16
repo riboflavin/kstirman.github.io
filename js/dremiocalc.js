@@ -50,7 +50,6 @@
           val = val.toString(35);
           hash += ("zz" + val).slice(-2);
         }
-        log(hash);
         return hash;
       };
       decodeHash = function(hash) {
@@ -60,7 +59,6 @@
           y = (hash[x] + hash[x + 1]).replace('z', '');
           data.push(parseInt(y, 35));
         }
-        log(data);
         return data;
       };
       updateHash = function(vals) {
