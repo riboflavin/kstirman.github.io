@@ -1,175 +1,116 @@
 <!DOCTYPE html>
-
-
-
-
-<html>
-    <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>ETL Tools - explained by Dremio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Dremio provides a powerful alternative to ETL that puts control in the hands of the business, and dramatically accelerates time to insight." />
-    <meta name="keywords" content="data engineering, data pipelines, NoSQL, Hadoop, Spark, JSON, ETL" />
-
-
-    <meta property="og:title" content="ETL Tools Explained? | Dremio"/>
-    <meta property="og:image" content=""/>
-    <meta property="og:url" content="http://www.dremio.com"/>
-    <meta property="og:site_name" content="dremio"/>
-    <meta property="og:description" content=""/>
-    <meta name="twitter:title" content="dremio | etl tools explained" />
-    <meta name="twitter:image" content="" />
-    <meta name="twitter:url" content="http://www.dremio.com" />
-    <meta name="twitter:card" content="" />
-
-
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="theme-color" content="#ffffff">
-
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
-
-
-    <link rel="stylesheet" href="/css/style.css">
-
-
-    <script src="/js/modernizr-2.6.2.min.js"></script>
-
-
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-92535580-1', 'auto');
-      ga('send', 'pageview');
-
-    </script>
-		<link href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:300,400,600" rel="stylesheet">
-		<script src="/js/jquery.min.js"></script>
-		<script src="/js/jquery.validate.min.js"></script>
-    </head>
-    <body>
-
-      <header role="banner" id="fh5co-header" class="navbar-fixed-top fh5co-animated slideInDown">
-        <div class="container">
-
-            <nav class="navbar navbar-default">
-                <div class="navbar-header">
-
-                    <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-                    <a href="/index.html"><img src="/img/dremio-logo-50px.png" class="navbar-logo"/></a>
-                </div>
-        		</nav>
-
-    		</div>
-			</header>
-
-		  <br/>
-		  <br/>
-		  <br/>
-  		<div class="container">
-      <script src="/js/dremiocalc.js"></script>
-  		<link rel="stylesheet" type="text/css" href="/css/dremiocalc.css" >
-      <script>
-        $(document).ready(function(){
-          dremioCalc({
-            minData: 10, 
-            minSourceSystems: 5,
-            minPeopleSaved: 0.5,
-            dataEngineer: 0.08, 
-            dataSourceMultiple: 0.2,
-            costOfITPro: 120000, 
-            annualServerCost: 18000, 
-            annualSoftwareFees: 10000, 
-            dataPipeline: 0.3, 
-            storageSavings: 0.93,
-            storageCostPerTB: 6500 
-          });
-        })
-      </script>
-
-			<section class="dremiocalc" dremio-calc="app">
-				<h1>Data Debt Calculator</h1>
-				<div class="input">
-					<div>
-						<div>
-							<h3><span>Source Data (TB)</span></h3>
-							<p>Enter the total amount of data you have in non-relational systems, including Hadoop, NoSQL, Amazon S3, and third party applications.</p>
-							<fieldset>
-								<input type="number" size="3" dremio-calc="dataSize" value="30" max="999">
-								<input type="range" dremio-calc="dataSize" value="30" min="0" max="999">
-								<span><span></span></span>
-							</fieldset>
-						</div>
-						<div>
-							<h3><span>Source Systems</span></h3>
-							<p>The data in the prior row is spread across multiple systems. Enter the number of systems rather than servers (eg, a 50 node Hadoop cluster would count as 1 system).</p>
-							<fieldset>
-								<input type="number" size="3" dremio-calc="numSystems" value="15" min="0" max="100">
-								<input type="range" dremio-calc="numSystems" value="15" min="0" max="100">
-								<span><span></span></span>
-							</fieldset>
-						</div>
-						<div>
-							<h3><span>Data Analysts</span></h3>
-							<p>How many data analysts use this data? One way to estimate is the number of users of Tableau, Power BI, Qlik, Cognos, BusinessObjects, and other BI or SQL tools.</p>
-							<fieldset>
-								<input type="number" size="3" dremio-calc="numAnalysts" value="60" min="0" max="500">
-								<input type="range" dremio-calc="numAnalysts" value="60" min="0" max="500">
-								<span><span></span></span>
-							</fieldset>
-						</div>
-						<div>
-							<h3><span>Data Scientists</span></h3>
-							<p>How many data scientists use this data? One way to estimate is the number of users of Python, R, SAS, SPSS, or SQL tools.</p>
-							<fieldset>
-								<input type="number" size="3" dremio-calc="numScientists" value="3" min="0" max="20">
-								<input type="range" dremio-calc="numScientists" value="3" min="0" max="20">
-								<span><span></span></span>
-							</fieldset>
-						</div>
-						<div>
-							<h3><span>Other Factors</span></h3>
-							<br/>
-							<p><span style="font-weight: bold;">Liability costs</span>. Big data involves tools and protocols that are less mature than traditional approaches. These systems pose a greater liability risk that must be considered in understanding your total debt. Liability costs include potential losses that can result from unsecured or ungoverned data moving through pipelines to make it compatible with the tools used by analysts and data scientists.</p>
-							<p><span style="font-weight: bold;">Opportunity costs</span>. Moving application data into analytical environments can take significant time. Reducing this time can have very high costs. Opportunity costs include unrealized value as a result of prolonged time to insight as data moves through pipelines to reach the tools used by analysts and data scientists.</p>
-						</div>
-					</div>
+<html lang="en" xml:lang="en" xmlns= "http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Language" content="en">
+	<title>Dremio Big Data Calculator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:300,400,600" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.1/clipboard.min.js"></script>
+	<script src="/js/dremiocalc.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css/dremiocalc.css" >
+	<script>
+		$(document).ready(function(){
+			dremioCalc({
+				minData: 10, 
+				minSourceSystems: 5,
+				minPeopleSaved: 0.5,
+				dataEngineer: 0.02, 
+				dataSourceMultiple: 0.2,
+				costOfITPro: 120000, 
+				annualServerCost: 18000, 
+				annualSoftwareFees: 10000, 
+				dataPipeline: 0.3, 
+				storageSavings: 0.93,
+				storageCostPerTB: 6500 
+			});
+		})
+	</script>
+</head>
+<body>
+	<nav class="dremiocalc-head">
+		<a href="http://www.dremio.com/index.html">
+			<img src="http://www.dremio.com/img/dremio-logo-50px.png" class="navbar-logo">
+		</a>
+	</nav>
+	<section class="dremiocalc" dremio-calc="app">
+		<h1>Data Debt Calculator</h1>
+		<div class="input">
+			<div>
+				<div>
+					<h3><span>Source Data (TB)</span></h3>
+					<p>Enter the total amount of data you have in non-relational systems, including Hadoop, NoSQL, Amazon S3, and third party applications.</p>
+					<fieldset>
+						<input type="number" size="3" dremio-calc="dataSize" value="30" max="999">
+						<input type="range" dremio-calc="dataSize" value="30" min="0" max="999">
+						<span><span></span></span>
+					</fieldset>
 				</div>
-				<div class="output">
-					<div>
-						<div>
-							<label>
-								<span>Technology Costs</span>
-								<input type="text" size="8" dremio-calc="techCosts" value="" readonly>
-							</label>
-						</div>
-						<div>
-							<label>
-								<span>People Costs</span>
-								<input type="text" size="8" dremio-calc="peopleCosts" value="" readonly>
-							</label>
-						</div>
-						<div>
-							<label>
-								<span>Total Big Data Debt</span>
-								<input type="text" size="8" dremio-calc="totalCosts" value="" readonly>
-							</label>
-						</div>
-						<div id="share">
-							<label>
-								<span>Share Your Results</span>
-								<input type="text" size="100" readonly>
-							</label>
-						</div>
+				<div>
+					<h3><span>Source Systems</span></h3>
+					<p>The data in the prior row is spread across multiple systems. Enter the number of systems rather than servers (eg, a 50 node Hadoop cluster would count as 1 system).</p>
+					<fieldset>
+						<input type="number" size="3" dremio-calc="numSystems" value="15" min="0" max="100">
+						<input type="range" dremio-calc="numSystems" value="15" min="0" max="100">
+						<span><span></span></span>
+					</fieldset>
 				</div>
-			</section>
-		</body>
+				<div>
+					<h3><span>Data Analysts</span></h3>
+					<p>How many data analysts use this data? One way to estimate is the number of users of Tableau, Power BI, Qlik, Cognos, BusinessObjects, and other BI or SQL tools.</p>
+					<fieldset>
+						<input type="number" size="3" dremio-calc="numAnalysts" value="60" min="0" max="500">
+						<input type="range" dremio-calc="numAnalysts" value="60" min="0" max="500">
+						<span><span></span></span>
+					</fieldset>
+				</div>
+				<div>
+					<h3><span>Data Scientists</span></h3>
+					<p>How many data scientists use this data? One way to estimate is the number of users of Python, R, SAS, SPSS, or SQL tools.</p>
+					<fieldset>
+						<input type="number" size="3" dremio-calc="numScientists" value="3" min="0" max="20">
+						<input type="range" dremio-calc="numScientists" value="3" min="0" max="20">
+						<span><span></span></span>
+					</fieldset>
+				</div>
+				<div>
+					<h3><span>Other Factors</span></h3>
+					<br/>
+					<p><span style="font-weight: bold;">Liability costs</span>. Big data involves tools and protocols that are less mature than traditional approaches. These systems pose a greater liability risk that must be considered in understanding your total debt. Liability costs include potential losses that can result from unsecured or ungoverned data moving through pipelines to make it compatible with the tools used by analysts and data scientists.</p>
+					<p><span style="font-weight: bold;">Opportunity costs</span>. Moving application data into analytical environments can take significant time. Reducing this time can have very high costs. Opportunity costs include unrealized value as a result of prolonged time to insight as data moves through pipelines to reach the tools used by analysts and data scientists.</p>
+				</div>
+			</div>
+		</div>
+		<div class="output">
+			<div>
+				<div>
+					<label class="total">
+						<span>Technology Costs</span>
+						<input type="text" size="8" dremio-calc="techCosts" value="" readonly>
+					</label>
+				</div>
+				<div>
+					<label class="total">
+						<span>People Costs</span>
+						<input type="text" size="8" dremio-calc="peopleCosts" value="" readonly>
+					</label>
+				</div>
+				<div>
+					<label class="total">
+						<span>Total Big Data Debt</span>
+						<input type="text" size="8" dremio-calc="totalCosts" value="" readonly>
+					</label>
+				</div>
+				<div id="share">
+					<button id="dremiocalc-button" dremio-calc="copy" data-clipboard-target="#dremiocalc-url">Copy to Clipboard</button>
+					<label>
+						<span>Share Your Results</span>
+						<input id="dremiocalc-url" type="text" size="100" dremio-calc="share" readonly>
+					</label>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
 </html>

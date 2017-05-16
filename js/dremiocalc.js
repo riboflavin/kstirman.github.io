@@ -1,26 +1,28 @@
 (function() {
   var log;
 
-  log = function() {
-    return false;
-  };
+  log = console.log;
 
-  window.dremioCalc = function(vals) {
+  window.dremioCalc = function(opts) {
     return $("[dremio-calc='app']").each(function() {
-      var $app, $input, animateVal, doCalc, input, inputs, outputs, updateFromParams, updateParams;
+      var $app, animateVal, decodeHash, doCalc, encodeHash, hashUpdateTimer, initShare, initUI, initVals, inputs, outputs, share, updateHash, updateHashDebounced, vals;
       $app = $(this);
       inputs = {
-        $dataSize: $app.find("[dremio-calc='dataSize']"),
-        $numSystems: $app.find("[dremio-calc='numSystems']"),
-        $numAnalysts: $app.find("[dremio-calc='numAnalysts']"),
-        $numScientists: $app.find("[dremio-calc='numScientists']")
+        $size: $app.find("[dremio-calc='dataSize']"),
+        $systems: $app.find("[dremio-calc='numSystems']"),
+        $analysts: $app.find("[dremio-calc='numAnalysts']"),
+        $scientists: $app.find("[dremio-calc='numScientists']")
       };
       outputs = {
         $techCosts: $app.find("[dremio-calc='techCosts']"),
         $peopleCosts: $app.find("[dremio-calc='peopleCosts']"),
         $totalCosts: $app.find("[dremio-calc='totalCosts']")
       };
-      vals = vals || {
+      share = {
+        $el: $('#share'),
+        $input: $app.find("[dremio-calc='share']")
+      };
+      opts = opts || {
         minData: 10,
         minSourceSystems: 5,
         minPeopleSaved: 0.5,
@@ -33,23 +35,64 @@
         storageSavings: 0.93,
         storageCostPerTB: 6500
       };
-      updateFromParams = function() {
-        var i, k, params, results, v;
-        params = window.location.hash.replace(/\#/g, '');
-        if (params !== '') {
-          params = params.split('&');
-          i = 0;
-          results = [];
-          while (i < params.length) {
-            k = params[i].split('=')[0];
-            v = params[i].split('=')[1];
-            $('[dremio-calc=\'app\']').find('[dremio-calc=\'' + k + '\']').val(v);
-            results.push(i++);
-          }
-          return results;
+      vals = {
+        size: 0,
+        systems: 0,
+        analysts: 0,
+        scientists: 0
+      };
+      hashUpdateTimer = false;
+      encodeHash = function(vals) {
+        var hash, i, len, val;
+        hash = "";
+        for (i = 0, len = vals.length; i < len; i++) {
+          val = vals[i];
+          val = val.toString(35);
+          hash += ("zz" + val).slice(-2);
+        }
+        log(hash);
+        return hash;
+      };
+      decodeHash = function(hash) {
+        var data, i, ref, x, y;
+        data = [];
+        for (x = i = 0, ref = hash.length; i < ref; x = i += 2) {
+          y = (hash[x] + hash[x + 1]).replace('z', '');
+          data.push(parseInt(y, 35));
+        }
+        log(data);
+        return data;
+      };
+      updateHash = function(vals) {
+        if (history.replaceState) {
+          history.replaceState(null, null, '#' + encodeHash(vals));
+        } else {
+          window.location.hash = '#' + encodeHash(vals);
+        }
+        share.$input.val(window.location.href);
+        return share.$el.addClass('show');
+      };
+      updateHashDebounced = function(vals) {
+        if (hashUpdateTimer) {
+          clearTimeout(hashUpdateTimer);
+          hashUpdateTimer = false;
+        }
+        return hashUpdateTimer = setTimeout(function() {
+          return updateHash(vals);
+        }, 250);
+      };
+      initVals = function() {
+        var data, hash;
+        hash = window.location.hash.replace('#', '');
+        if (hash.length) {
+          data = decodeHash(hash);
+          inputs.$size.val(data[0]);
+          inputs.$systems.val(data[1]);
+          inputs.$analysts.val(data[2]);
+          inputs.$scientists.val(data[3]);
+          return share.$input.val(window.location.href);
         }
       };
-      updateFromParams();
       animateVal = function($input, newVal) {
         var oldVal;
         oldVal = parseInt($input.val().replace(/\D/g, ''));
@@ -67,55 +110,71 @@
         });
       };
       doCalc = function() {
-        var dataSize, dataSourcePeopleFactor, numAnalysts, numScientists, numSystems, peopleCosts, peopleFactor, serverCosts, storageCosts, techCosts, totalCosts;
-        dataSize = parseInt(inputs.$dataSize.val() || 0);
-        numSystems = parseInt(inputs.$numSystems.val() || 0);
-        numAnalysts = parseInt(inputs.$numAnalysts.val() || 0);
-        numScientists = parseInt(inputs.$numScientists.val() || 0);
-        log(dataSize, numSystems, numAnalysts, numScientists);
-        dataSourcePeopleFactor = Math.max(vals.dataSourceMultiple * numSystems, vals.minSourceSystems);
-        peopleFactor = Math.max((numAnalysts + numScientists + dataSourcePeopleFactor) * vals.dataEngineer, vals.minPeopleSaved);
-        storageCosts = Math.max(vals.minData, dataSize) * vals.storageCostPerTB;
-        serverCosts = Math.max(vals.minSourceSystems, numSystems) * vals.dataPipeline * (vals.annualServerCost + vals.annualSoftwareFees);
+        var dataSourcePeopleFactor, peopleCosts, peopleFactor, serverCosts, storageCosts, techCosts, totalCosts;
+        vals.size = parseInt(inputs.$size.val() || 0);
+        vals.systems = parseInt(inputs.$systems.val() || 0);
+        vals.analysts = parseInt(inputs.$analysts.val() || 0);
+        vals.scientists = parseInt(inputs.$scientists.val() || 0);
+        dataSourcePeopleFactor = Math.max(opts.dataSourceMultiple * vals.systems, opts.minSourceSystems);
+        peopleFactor = Math.max((vals.analysts + vals.scientists + dataSourcePeopleFactor) * opts.dataEngineer, opts.minPeopleSaved);
+        storageCosts = Math.max(opts.minData, vals.size) * opts.storageCostPerTB;
+        serverCosts = Math.max(opts.minSourceSystems, vals.systems) * opts.dataPipeline * (opts.annualServerCost + opts.annualSoftwareFees);
         techCosts = storageCosts + serverCosts;
-        peopleCosts = peopleFactor * vals.costOfITPro;
+        peopleCosts = peopleFactor * opts.costOfITPro;
         totalCosts = techCosts + peopleCosts;
         animateVal(outputs.$techCosts, techCosts);
         animateVal(outputs.$peopleCosts, peopleCosts);
         return animateVal(outputs.$totalCosts, totalCosts);
       };
-      updateParams = function() {
-        var urlHashInput;
-        urlHashInput = '';
-        $.each(inputs, function(i, el) {
-          var q;
-          q = i.replace(/\$/g, '');
-          return urlHashInput += q + '=' + $(el).val() + '&';
-        });
-        window.location.hash = urlHashInput.slice(0, -1);
-        $('#share input').val(window.location.href + window.location.hash);
-        return $('#share').show();
+      initUI = function() {
+        var $input, input, results;
+        results = [];
+        for (input in inputs) {
+          $input = inputs[input];
+          $input.on('input', {
+            input: input
+          }, function(e) {
+            inputs[e.data.input].not(this).val($(this).val());
+            doCalc();
+            return updateHashDebounced([vals.size, vals.systems, vals.analysts, vals.scientists]);
+          });
+          results.push($input.on('blur', {
+            input: input
+          }, function(e) {
+            if (!$(this).val()) {
+              return inputs[e.data.input].val(0);
+            }
+          }));
+        }
+        return results;
       };
-      $("#share input").focus(function() { $(this).select(); } );;
-      $("#share input").mouseup(function(e){ e.preventDefault(); });;
-      $('#share input').val(window.location.href + window.location.hash);
-      for (input in inputs) {
-        $input = inputs[input];
-        $input.on('input', {
-          input: input
-        }, function(e) {
-          inputs[e.data.input].not(this).val($(this).val());
-          doCalc();
-          updateParams(inputs);
-          return log('keyup', $(this).val(), e);
+      initShare = function() {
+        var clipboard;
+        share.$input.on('focus', function() {
+          return $(this).trigger('select');
         });
-        $input.on('blur', function(e) {
-          if (!$(this).val()) {
-            return $(this).val('0');
-          }
+        share.$input.on('mouseup', function(e) {
+          return e.preventDefault();
         });
-      }
-      return doCalc();
+        if (Clipboard && Clipboard.isSupported()) {
+          clipboard = new Clipboard("#dremiocalc-button");
+          return clipboard.on('success', function(e) {
+            var $this, reset;
+            $this = $(e.trigger);
+            $this.addClass('copied');
+            reset = function() {
+              return $this.removeClass('copied');
+            };
+            return setTimeout(reset, 1500);
+          });
+        } else {
+          return $app.find("#dremiocalc-button").remove();
+        }
+      };
+      initVals();
+      initUI();
+      doCalc();
+      return initShare();
     });
   };
 
