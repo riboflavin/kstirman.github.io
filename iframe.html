@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns= "http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Language" content="en">
+		<title>Dremio</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+	</head>
+	<body class="">
+
+<script>
+
+// Initialize Intercom on Page, this script may not be necessary if Intercom is already included sitewide
+
+window.intercomSettings = {
+	app_id: "gdcxa2zo"
+};
+
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/gdcxa2zo';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+
+
+// Pull email and name from URL and update intercom
+
+var UserInfo = function(){
+
+	function updateIntercom (){
+
+		var search = location.search.substring(1);
+
+		if ( search != '' ) {
+
+			var params = JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}');
+
+			if (params.hasOwnProperty('email') && params.hasOwnProperty('name')) {
+				var name = params['name'];
+				var email = params['email'];
+
+				console.log('name = ' + name);
+				console.log('email = ' + email);
+
+				Intercom('update', {
+				    email: email,
+				    name: name
+				});
+			}
+		}
+	}
+
+	return {
+		updateIntercom: updateIntercom,
+	};
+
+}();
+UserInfo.updateIntercom();
+
+
+</script>
+	</body>
+</html>
